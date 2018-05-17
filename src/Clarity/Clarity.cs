@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -11,13 +15,13 @@ namespace Clarity
     {
         public ConcurrentBag<IDisposable> Disposables = new ConcurrentBag<IDisposable>();
 
-        public ICommand Command(Action function) => new Command(function);
-
         public void Dispose()
         {
             foreach (var disposable in Disposables)
                 disposable.Dispose();
         }
+
+        public ICommand Command(Action function) => new Command(function);
 
         public BindableModel<T> CreateBindableModel<T>(T model, Action<T, Validator<T>> validate = null)
         {
@@ -32,5 +36,14 @@ namespace Clarity
             Disposables.Add(bv);
             return bv;
         }
+
+        public Task PushAsync(Page page) => Application.Current.MainPage.Navigation.PushAsync(page);
+        public Task PopAsync() => Application.Current.MainPage.Navigation.PopAsync();
+        public Task PopToRootAsync() => Application.Current.MainPage.Navigation.PopToRootAsync();
+
+        public Task PushModalAsync(Page page) => Application.Current.MainPage.Navigation.PushModalAsync(page);
+        public Task PopModalAsync() => Application.Current.MainPage.Navigation.PopModalAsync();
+
+        public TOwner Build<TOwner>() => ClarityInjector.Resolve<TOwner>();
     }
 }

@@ -10,21 +10,21 @@ namespace Clarity
 {
     public class MainScreen : ClarityBase
     {
-        private List<Task> _tasks = new List<Task>();
+        private List<MyTask> _tasks = new List<MyTask>();
 
-        public BindableObject Build()
+        public BindableObject Main()
         {
             var maxTaskLength = 200;
-            var taskModel = CreateBindableModel(new Task(), taskValidator);
+            var taskModel = CreateBindableModel(new MyTask(), taskValidator);
             var text = CreateBindableValue("");
             
             void addTask()
             {
                 _tasks.Add(taskModel.Value);
-                taskModel.Value = new Task();
+                taskModel.Value = new MyTask();
             }
 
-            void taskValidator(Task task, Validator<Task> validator)
+            void taskValidator(MyTask task, Validator<MyTask> validator)
             {
                 if (string.IsNullOrWhiteSpace(task.TaskName))
                     validator.AddError("Task name cannot be empty");
@@ -46,7 +46,7 @@ namespace Clarity
 
     
 
-    public class Task
+    public class MyTask
     {
         public string TaskName { get; set; }
         public bool IsCompleted { get; set; }
