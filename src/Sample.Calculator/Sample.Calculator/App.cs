@@ -7,28 +7,9 @@ using Xamarin.Forms;
 namespace Sample.Calculator
 {
     public class App : Application {
-        public App() => MainPage = new Validation().MainPage();
+        public App() => MainPage = new Calculator().MainPage();
     }
-
-    public class Validation : ClarityBase
-    {
-        public ContentPage MainPage()
-        {
-            var counter = CreateBindableValue(0);
-
-            // define local function for Button's Command
-            void increment() => counter.Value++;
-
-            return ContentPage.Content(
-                        StackLayout.Children(
-                            Label.Text(counter, c => c.ToString()),
-                            Button.Text("Increment")
-                                  .Command(increment)
-                        )
-                    );
-        }
-    }
-
+    
     public class Calculator : ClarityBase
     {
         delegate double CalcOp(double accu, double val);

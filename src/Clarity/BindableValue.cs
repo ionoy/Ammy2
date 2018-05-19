@@ -16,10 +16,15 @@ namespace Clarity
         public TVal Value {
             get => _value;
             set {
+                if (object.Equals(_value, value))
+                    return;
+
                 _value = value;
 
                 foreach (var changeHandler in _changeHandlers)
                     changeHandler.Key(value);
+
+                Validate(false);
             }
         }
 
@@ -36,13 +41,7 @@ namespace Clarity
                 _validator = new Validator<TVal>(validate);
             }
         }
-
-        public void SetValueSilent(TVal value)
-        {
-            _value = value;
-            Validate(false);
-        }
-
+        
         public IDisposable Subscribe(Action<TVal> newValue)
         {
             _changeHandlers[newValue] = null;

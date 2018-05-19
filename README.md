@@ -28,6 +28,7 @@ public class HelloWorld : ClarityBase
     }
 }
 ```
+![preview](https://raw.githubusercontent.com/ionoy/Clarity/master/content/helloworld.gif?token=AAkK8AJFMdQZyigKDTrjVUtbYFJz0NcIks5bCUfAwA%3D%3D)
 
 As you can see, both **data** and **presentation** reside in the same method. But don't get your pitchforks up - **IT'S OKAY**. Your **data** still doesn't know anything about the **view** and most of the communication is still done with binding. But now it's much easier to navigate between the view and the code. 
 
@@ -80,6 +81,8 @@ You can pass labmda function to the `Command` extension method and it will be ex
 
 You can still use the good old `ICommand` interface if you want, but you rarely need to.
 
+![preview](https://raw.githubusercontent.com/ionoy/Clarity/master/content/increment.gif?token=AAkK8AJFMdQZyigKDTrjVUtbYFJz0NcIks5bCUfAwA%3D%3D)
+
 ## **Validation**
 
 Validation is tied to `BindableValue<T>` and `BindableModel<T>`. 
@@ -102,3 +105,4 @@ Validation is tied to `BindableValue<T>` and `BindableModel<T>`.
                 );
     }
 ```
+![preview](https://raw.githubusercontent.com/ionoy/Clarity/master/content/validation.gif?token=AAkK8AJFMdQZyigKDTrjVUtbYFJz0NcIks5bCUfAwA%3D%3D)

@@ -26,7 +26,7 @@ namespace Clarity
         
         public BindingMode DefaultBindingMode => BindingMode.Default;
         public IDisposable Subscribe(Action<T> onUpdate) => _bindableValue.Subscribe(onUpdate);
-        public void SetValue(T val) => _bindableValue.SetValueSilent(val);
+        public void SetValue(T val) => _bindableValue.Value = val;
         public T GetValue() => _bindableValue.Value;
     }
 
