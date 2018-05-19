@@ -1,46 +1,47 @@
 ﻿using Clarity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace Sample.Calculator
 {
     public class App : Application {
-        public App() => MainPage = new NavigationPage(new Calculator().MainPage());
+        public App() => MainPage = new Calculator().MainPage();
     }
 
     public class Calculator : ClarityBase
     {
         delegate double CalcOp(double accu, double val);
-        CalcOp _initOp = (_, val) => val;
-
+        
         public ContentPage MainPage()
         {
-            var current = CreateBindableValue(0.0);
-            var queuedVal = 0.0;
-            var queuedOp = _initOp;
-            var operatorQueued = false;
+            var initOp = new CalcOp((_, val) => val);
+            var currentValue = CreateBindableValue(0.0);
+            var queuedValue = 0.0;
+            var queuedOp = initOp;
+            var isOperatorQueued = false;
 
             void appendNumber(int number)
             {
-                if (operatorQueued) {
-                    current.Value = number;
-                    operatorQueued = false;
+                if (isOperatorQueued) {
+                    currentValue.Value = number;
+                    isOperatorQueued = false;
                 } else {
-                    current.Value = current.Value * 10 + number;
+                    currentValue.Value = currentValue.Value * 10 + number;
                 }
             }
             void applyOperator(CalcOp op)
             {
-                queuedVal = current.Value = queuedOp(queuedVal, current.Value);
+                queuedValue = currentValue.Value = queuedOp(queuedValue, currentValue.Value);
                 queuedOp = op;
-                operatorQueued = true;
+                isOperatorQueued = true;
             }
             void clear()
             {
-                queuedVal = 0;
-                queuedOp = _initOp;
-                current.Value = 0;
+                queuedValue = 0;
+                queuedOp = initOp;
+                currentValue.Value = 0;
             }
 
             return ContentPage.Content(
@@ -51,7 +52,7 @@ namespace Sample.Calculator
                                     .FontSize(32).FontAttributes(FontAttributes.Bold)
                                     .HorizontalTextAlignment(TextAlignment.End)
                                     .VerticalTextAlignment(TextAlignment.Center)
-                                    .Text(current, v => v.ToString()),
+                                    .Text(currentValue, v => v.ToString()),
                                BuildNumberPad(appendNumber),
                                Button.Text("/").Grid_RowCol(1, 3).Command(() => applyOperator((accu, val) => accu / val)),
                                Button.Text("*").Grid_RowCol(2, 3).Command(() => applyOperator((accu, val) => accu * val)),
@@ -63,19 +64,13 @@ namespace Sample.Calculator
                    );
         }
 
-        IEnumerable<Button> BuildNumberPad(Action<int> appendNumber)
-        {
-            yield return Button.Grid_Row(4)
-                               .Grid_ColumnSpan(3)
-                               .Command(() => appendNumber(0))
-                               .Text("0");
-
-            for (int i = 1; i < 10; i++) {
-                var number = i;
-                yield return Button.Grid_RowCol(4 - ((i + 2) / 3), (i + 2) % 3)
-                                   .Command(() => appendNumber(number))
-                                   .Text(i.ToString());
-            }
-        }
+        IEnumerable<Button> BuildNumberPad(Action<int> appendNumber) =>
+            Enumerable.Range(0, 10).Select(i => {
+                return Button.Grid_RowCol(i == 0 ? 4 : 4 - ((i + 2) / 3),
+                                          i == 0 ? 0 : (i + 2) % 3)
+                             .Grid_ColumnSpan(i == 0 ? 3 : 1)
+                             .Command(() => appendNumber(i))
+                             .Text(i.ToString());
+            });
     }
 }
