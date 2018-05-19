@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace Clarity
@@ -23,7 +24,31 @@ namespace Clarity
             return instance;
         }
 
-        public static TLayout Children<TLayout>(this TLayout instance, params View[] children) where TLayout : Layout<View>
+        public static TElement SetAttachedValue<TElement, TVal>(TElement instance, BindableProperty property, TVal value) where TElement : BindableObject
+        {
+            instance.SetValue(property, value);
+            return instance;
+        }
+
+        public static TLayout Children<TLayout>(this TLayout instance, params View[] children) where TLayout : Layout<View> => instance.Children((IEnumerable<View>)children);
+
+        public static TLayout Children<TLayout>(this TLayout instance, params object[] children) where TLayout : Layout<View>
+        {
+            foreach (var child in children) {
+                if (child is IEnumerable<View> views) {
+                    foreach (var view in views)
+                        instance.Children.Add(view);
+                } else if (child is View view) {
+                    instance.Children.Add(view);
+                } else if (child != null) {
+                    throw new InvalidOperationException("Cannot insert element of type " + child.GetType() + " into Children collection");
+                } else throw new InvalidOperationException("Cannot insert null into Children collection");
+            }
+
+            return instance;
+        }
+
+        public static TLayout Children<TLayout>(this TLayout instance, IEnumerable<View> children) where TLayout : Layout<View>
         {
             foreach (var child in children)
                 instance.Children.Add(child);

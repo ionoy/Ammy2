@@ -4648,6 +4648,31 @@ namespace Clarity {
     public static Xamarin.Forms.Frame BindingContext<TFrom>(this Xamarin.Forms.Frame obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Frame.BindingContextProperty, value, selector);
   }
 
+public static partial class BindableObjectExtensions {
+public static TElement NavigationPage_BackButtonTitle<TElement>(this TElement instance, System.String val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.NavigationPage.BackButtonTitleProperty, val);
+public static TElement NavigationPage_HasNavigationBar<TElement>(this TElement instance, System.Boolean val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.NavigationPage.HasNavigationBarProperty, val);
+public static TElement NavigationPage_HasBackButton<TElement>(this TElement instance, System.Boolean val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.NavigationPage.HasBackButtonProperty, val);
+public static TElement NavigationPage_TitleIcon<TElement>(this TElement instance, Xamarin.Forms.FileImageSource val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.NavigationPage.TitleIconProperty, val);
+
+public static TElement Slider_Value<TElement>(this TElement instance, System.Object val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.Slider.ValueProperty, val);
+
+public static TElement Stepper_Value<TElement>(this TElement instance, System.Object val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.Stepper.ValueProperty, val);
+
+public static TElement AbsoluteLayout_LayoutFlags<TElement>(this TElement instance, Xamarin.Forms.AbsoluteLayoutFlags val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty, val);
+public static TElement AbsoluteLayout_LayoutBounds<TElement>(this TElement instance, Xamarin.Forms.Rectangle val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty, val);
+
+public static TElement RelativeLayout_XConstraint<TElement>(this TElement instance, Xamarin.Forms.Constraint val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.RelativeLayout.XConstraintProperty, val);
+public static TElement RelativeLayout_YConstraint<TElement>(this TElement instance, Xamarin.Forms.Constraint val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.RelativeLayout.YConstraintProperty, val);
+public static TElement RelativeLayout_WidthConstraint<TElement>(this TElement instance, Xamarin.Forms.Constraint val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.RelativeLayout.WidthConstraintProperty, val);
+public static TElement RelativeLayout_HeightConstraint<TElement>(this TElement instance, Xamarin.Forms.Constraint val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.RelativeLayout.HeightConstraintProperty, val);
+public static TElement RelativeLayout_BoundsConstraint<TElement>(this TElement instance, Xamarin.Forms.BoundsConstraint val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.RelativeLayout.BoundsConstraintProperty, val);
+
+public static TElement Grid_Row<TElement>(this TElement instance, System.Int32 val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.Grid.RowProperty, val);
+public static TElement Grid_RowSpan<TElement>(this TElement instance, System.Int32 val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.Grid.RowSpanProperty, val);
+public static TElement Grid_Column<TElement>(this TElement instance, System.Int32 val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.Grid.ColumnProperty, val);
+public static TElement Grid_ColumnSpan<TElement>(this TElement instance, System.Int32 val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.Grid.ColumnSpanProperty, val);
+
+}
   public partial class ClarityBase {
     public Xamarin.Forms.ColumnDefinition ColumnDefinition => new Xamarin.Forms.ColumnDefinition();
     public Xamarin.Forms.RowDefinition RowDefinition => new Xamarin.Forms.RowDefinition();

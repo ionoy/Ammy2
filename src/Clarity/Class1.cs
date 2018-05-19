@@ -32,7 +32,6 @@ namespace Clarity
 
             return Grid.Width(100)
                        .Height(200)
-                       .RowDefinitions()
                        .Children(
                            Entry.Text(""),
                            Label.Text(text),

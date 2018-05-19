@@ -10,6 +10,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clarity", "Clarity\Clarity.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clarity.Generator", "Clarity.Generator\Clarity.Generator.csproj", "{AA3A5F92-B3F9-4F41-9523-534882EEDE1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Calculator.Android", "Sample.Calculator\Sample.Calculator.Android\Sample.Calculator.Android.csproj", "{4A1351D1-9EB1-4667-8EA2-B04BC5F812D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Calculator", "Sample.Calculator\Sample.Calculator\Sample.Calculator.csproj", "{B54C59DA-9D2C-4997-98B2-8EF80720C492}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,16 @@ Global
 		{AA3A5F92-B3F9-4F41-9523-534882EEDE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA3A5F92-B3F9-4F41-9523-534882EEDE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA3A5F92-B3F9-4F41-9523-534882EEDE1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1351D1-9EB1-4667-8EA2-B04BC5F812D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1351D1-9EB1-4667-8EA2-B04BC5F812D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1351D1-9EB1-4667-8EA2-B04BC5F812D1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4A1351D1-9EB1-4667-8EA2-B04BC5F812D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1351D1-9EB1-4667-8EA2-B04BC5F812D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1351D1-9EB1-4667-8EA2-B04BC5F812D1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B54C59DA-9D2C-4997-98B2-8EF80720C492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54C59DA-9D2C-4997-98B2-8EF80720C492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54C59DA-9D2C-4997-98B2-8EF80720C492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54C59DA-9D2C-4997-98B2-8EF80720C492}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

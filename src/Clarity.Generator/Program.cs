@@ -92,62 +92,87 @@ namespace Clarity.Generator
 
         private static IEnumerable<string> GenerateExtensionMethods(Type[] types, Type bindablePropertyType, ConcurrentDictionary<Type, IReadOnlyList<string>> generatedProperties)
         {
-            foreach (var type in types)
-                yield return GenerateExtensionMethods(type, bindablePropertyType, generatedProperties);
-        }
+            var attachedPropertyExtensions = new List<string>();
 
-        private static string GenerateExtensionMethods(Type type, Type bindablePropertyType, ConcurrentDictionary<Type, IReadOnlyList<string>> generatedProperties)
-        {
-            var sb = new StringBuilder();
-            var baseTypes = GetBaseTypes(type);
-            var bindableProperties = type.GetFields(BindingFlags.Static | BindingFlags.FlattenHierarchy | BindingFlags.Public)
-                                         .Where(f => f.FieldType == bindablePropertyType)
-                                         //.Where(f => !IsGeneratedAlready(generatedProperties, f.Name, baseTypes))
-                                         .ToList();
+            foreach (var type in types) {
+                var bindableProperties = type.GetFields(BindingFlags.Static | BindingFlags.FlattenHierarchy | BindingFlags.Public)
+                                             .Where(f => f.FieldType == bindablePropertyType)
+                                             .ToList();
 
-            sb.AppendLine($"  public static partial class {type.Name}Extensions {{");
-
-            foreach (var bindableProperty in bindableProperties) {
-                var clrPropertyName = bindableProperty.Name.Substring(0, bindableProperty.Name.Length - "Property".Length);
-                var clrProperty = type.GetProperty(clrPropertyName);
-                var typeName = GetTypeName(type);
-
-                if (clrProperty != null) {
-                    var propertyTypeName = GetTypeName(clrProperty.PropertyType);
-                    var signature = $"this {typeName} obj, {propertyTypeName} value";
-                    var bindableSignature = $"this {typeName} obj, BindableValue<{propertyTypeName}> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default";
-                    var bindableWithExprSignature = $"this {typeName} obj, BindableValue<TFrom> value, System.Func<TFrom, {propertyTypeName}> selector";
-                    var baseArgs = $"obj, {type.FullName}.{bindableProperty.Name}, value";
-                    var start = "Helpers.SetPropertyValue(";
-                    var end = ");";
-
-                    sb.AppendLine($"    public static {typeName} {clrPropertyName}({signature}) => {start + baseArgs + end}");
-                    sb.AppendLine($"    public static {typeName} {clrPropertyName}({bindableSignature}) => {start + baseArgs}, mode{end}");
-                    sb.AppendLine($"    public static {typeName} {clrPropertyName}<TFrom>({bindableWithExprSignature}) => {start + baseArgs}, selector{end}");
-
-                    if (propertyTypeName == "System.Windows.Input.ICommand") {
-                        var commandBody = $"Helpers.SetPropertyValue(obj, {type.FullName}.{bindableProperty.Name}, new Xamarin.Forms.Command(function));";
-                        sb.AppendLine($" public static {typeName} {clrPropertyName}(this {typeName} obj, System.Action function) => {commandBody}");
-                    }
-                }
+                yield return GenerateExtensionMethods(type, bindableProperties);
+                attachedPropertyExtensions.Add(GenerateAttachedPropertyExtension(type, bindableProperties));
             }
 
-            sb.AppendLine("  }");
+            yield return "public static partial class BindableObjectExtensions {";
+            yield return string.Join(Environment.NewLine, attachedPropertyExtensions.Where(e => !string.IsNullOrWhiteSpace(e)));
+            yield return "}";
+        }
 
-            //generatedProperties[type] = bindableProperties.Select(fi => fi.Name).ToArray();
+        private static string GenerateAttachedPropertyExtension(Type type, List<FieldInfo> bindableProperties)
+        {
+            var sb = new StringBuilder();
+            var methods = type.GetMethods(); 
 
+            foreach (var bindableProperty in bindableProperties) {
+                var normalPropertyName = GetNormalPropertyName(bindableProperty);
+                var getter = methods.FirstOrDefault(m => m.Name == "Get" + normalPropertyName);
+                var setter = methods.FirstOrDefault(m => m.Name == "Set" + normalPropertyName);
+
+                if (getter != null && setter != null) {
+                    var valueType = getter.ReturnType;
+                    sb.AppendLine($"public static TElement {type.Name}_{normalPropertyName}<TElement>(this TElement instance, {valueType.FullName} val) where TElement : Xamarin.Forms.BindableObject " +
+                                  $"=> Helpers.SetAttachedValue(instance, {type.FullName}.{bindableProperty.Name}, val);");
+                }
+            }
+            
             return sb.ToString();
         }
 
-        private static bool IsGeneratedAlready(ConcurrentDictionary<Type, IReadOnlyList<string>> generatedProperties, string propertyName, IEnumerable<Type> baseTypes)
+        private static string GenerateExtensionMethods(Type type, List<FieldInfo> bindableProperties)
         {
-            foreach (var bt in baseTypes)
-                if (generatedProperties.TryGetValue(bt, out var propertyList) && propertyList.Contains(propertyName))
-                    return true;
+            var sb = new StringBuilder();
+
+            sb.AppendLine($"  public static partial class {type.Name}Extensions {{");
+
+            foreach (var bindableProperty in bindableProperties)
+                GenerateBindablePropertyExtension(type, sb, bindableProperty);
+
+            sb.AppendLine("  }");
             
-            return false;
+            return sb.ToString();
         }
 
+        private static void GenerateBindablePropertyExtension(Type type, StringBuilder sb, FieldInfo bindableProperty)
+        {
+            var clrPropertyName = GetNormalPropertyName(bindableProperty);
+            var clrProperty = type.GetProperty(clrPropertyName);
+            var typeName = GetTypeName(type);
+
+            if (clrProperty != null) {
+                var propertyTypeName = GetTypeName(clrProperty.PropertyType);
+                var signature = $"this {typeName} obj, {propertyTypeName} value";
+                var bindableSignature = $"this {typeName} obj, BindableValue<{propertyTypeName}> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default";
+                var bindableWithExprSignature = $"this {typeName} obj, BindableValue<TFrom> value, System.Func<TFrom, {propertyTypeName}> selector";
+                var baseArgs = $"obj, {type.FullName}.{bindableProperty.Name}, value";
+                var start = "Helpers.SetPropertyValue(";
+                var end = ");";
+
+                sb.AppendLine($"    public static {typeName} {clrPropertyName}({signature}) => {start + baseArgs + end}");
+                sb.AppendLine($"    public static {typeName} {clrPropertyName}({bindableSignature}) => {start + baseArgs}, mode{end}");
+                sb.AppendLine($"    public static {typeName} {clrPropertyName}<TFrom>({bindableWithExprSignature}) => {start + baseArgs}, selector{end}");
+
+                if (propertyTypeName == "System.Windows.Input.ICommand") {
+                    var commandBody = $"Helpers.SetPropertyValue(obj, {type.FullName}.{bindableProperty.Name}, new Xamarin.Forms.Command(function));";
+                    sb.AppendLine($" public static {typeName} {clrPropertyName}(this {typeName} obj, System.Action function) => {commandBody}");
+                }
+            }
+        }
+
+        private static string GetNormalPropertyName(FieldInfo bindableProperty)
+        {
+            return bindableProperty.Name.Substring(0, bindableProperty.Name.Length - "Property".Length);
+        }
+        
         private static string GetTypeName(Type type)
         {
             if (type.IsGenericType) {
