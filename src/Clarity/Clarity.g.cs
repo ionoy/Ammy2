@@ -1,5 +1,5 @@
 namespace Clarity {
-  public static class ColumnDefinitionExtensions {
+  public static partial class ColumnDefinitionExtensions {
     public static Xamarin.Forms.ColumnDefinition Width(this Xamarin.Forms.ColumnDefinition obj, Xamarin.Forms.GridLength value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ColumnDefinition.WidthProperty, value);
     public static Xamarin.Forms.ColumnDefinition Width(this Xamarin.Forms.ColumnDefinition obj, BindableValue<Xamarin.Forms.GridLength> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ColumnDefinition.WidthProperty, value, mode);
     public static Xamarin.Forms.ColumnDefinition Width<TFrom>(this Xamarin.Forms.ColumnDefinition obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.GridLength> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ColumnDefinition.WidthProperty, value, selector);
@@ -8,7 +8,7 @@ namespace Clarity {
     public static Xamarin.Forms.ColumnDefinition BindingContext<TFrom>(this Xamarin.Forms.ColumnDefinition obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ColumnDefinition.BindingContextProperty, value, selector);
   }
 
-  public static class RowDefinitionExtensions {
+  public static partial class RowDefinitionExtensions {
     public static Xamarin.Forms.RowDefinition Height(this Xamarin.Forms.RowDefinition obj, Xamarin.Forms.GridLength value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.RowDefinition.HeightProperty, value);
     public static Xamarin.Forms.RowDefinition Height(this Xamarin.Forms.RowDefinition obj, BindableValue<Xamarin.Forms.GridLength> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.RowDefinition.HeightProperty, value, mode);
     public static Xamarin.Forms.RowDefinition Height<TFrom>(this Xamarin.Forms.RowDefinition obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.GridLength> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.RowDefinition.HeightProperty, value, selector);
@@ -17,7 +17,7 @@ namespace Clarity {
     public static Xamarin.Forms.RowDefinition BindingContext<TFrom>(this Xamarin.Forms.RowDefinition obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.RowDefinition.BindingContextProperty, value, selector);
   }
 
-  public static class ApplicationExtensions {
+  public static partial class ApplicationExtensions {
     public static Xamarin.Forms.Application ClassId(this Xamarin.Forms.Application obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Application.ClassIdProperty, value);
     public static Xamarin.Forms.Application ClassId(this Xamarin.Forms.Application obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Application.ClassIdProperty, value, mode);
     public static Xamarin.Forms.Application ClassId<TFrom>(this Xamarin.Forms.Application obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Application.ClassIdProperty, value, selector);
@@ -26,7 +26,7 @@ namespace Clarity {
     public static Xamarin.Forms.Application BindingContext<TFrom>(this Xamarin.Forms.Application obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Application.BindingContextProperty, value, selector);
   }
 
-  public static class GestureRecognizerExtensions {
+  public static partial class GestureRecognizerExtensions {
     public static Xamarin.Forms.GestureRecognizer ClassId(this Xamarin.Forms.GestureRecognizer obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.GestureRecognizer.ClassIdProperty, value);
     public static Xamarin.Forms.GestureRecognizer ClassId(this Xamarin.Forms.GestureRecognizer obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.GestureRecognizer.ClassIdProperty, value, mode);
     public static Xamarin.Forms.GestureRecognizer ClassId<TFrom>(this Xamarin.Forms.GestureRecognizer obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.GestureRecognizer.ClassIdProperty, value, selector);
@@ -35,7 +35,7 @@ namespace Clarity {
     public static Xamarin.Forms.GestureRecognizer BindingContext<TFrom>(this Xamarin.Forms.GestureRecognizer obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.GestureRecognizer.BindingContextProperty, value, selector);
   }
 
-  public static class HtmlWebViewSourceExtensions {
+  public static partial class HtmlWebViewSourceExtensions {
     public static Xamarin.Forms.HtmlWebViewSource Html(this Xamarin.Forms.HtmlWebViewSource obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.HtmlWebViewSource.HtmlProperty, value);
     public static Xamarin.Forms.HtmlWebViewSource Html(this Xamarin.Forms.HtmlWebViewSource obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.HtmlWebViewSource.HtmlProperty, value, mode);
     public static Xamarin.Forms.HtmlWebViewSource Html<TFrom>(this Xamarin.Forms.HtmlWebViewSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.HtmlWebViewSource.HtmlProperty, value, selector);
@@ -47,7 +47,7 @@ namespace Clarity {
     public static Xamarin.Forms.HtmlWebViewSource BindingContext<TFrom>(this Xamarin.Forms.HtmlWebViewSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.HtmlWebViewSource.BindingContextProperty, value, selector);
   }
 
-  public static class UrlWebViewSourceExtensions {
+  public static partial class UrlWebViewSourceExtensions {
     public static Xamarin.Forms.UrlWebViewSource Url(this Xamarin.Forms.UrlWebViewSource obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.UrlWebViewSource.UrlProperty, value);
     public static Xamarin.Forms.UrlWebViewSource Url(this Xamarin.Forms.UrlWebViewSource obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.UrlWebViewSource.UrlProperty, value, mode);
     public static Xamarin.Forms.UrlWebViewSource Url<TFrom>(this Xamarin.Forms.UrlWebViewSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.UrlWebViewSource.UrlProperty, value, selector);
@@ -56,7 +56,7 @@ namespace Clarity {
     public static Xamarin.Forms.UrlWebViewSource BindingContext<TFrom>(this Xamarin.Forms.UrlWebViewSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.UrlWebViewSource.BindingContextProperty, value, selector);
   }
 
-  public static class VisualElementExtensions {
+  public static partial class VisualElementExtensions {
     public static Xamarin.Forms.VisualElement Navigation(this Xamarin.Forms.VisualElement obj, Xamarin.Forms.INavigation value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.VisualElement.NavigationProperty, value);
     public static Xamarin.Forms.VisualElement Navigation(this Xamarin.Forms.VisualElement obj, BindableValue<Xamarin.Forms.INavigation> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.VisualElement.NavigationProperty, value, mode);
     public static Xamarin.Forms.VisualElement Navigation<TFrom>(this Xamarin.Forms.VisualElement obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.INavigation> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.VisualElement.NavigationProperty, value, selector);
@@ -143,31 +143,31 @@ namespace Clarity {
     public static Xamarin.Forms.VisualElement BindingContext<TFrom>(this Xamarin.Forms.VisualElement obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.VisualElement.BindingContextProperty, value, selector);
   }
 
-  public static class EventTriggerExtensions {
+  public static partial class EventTriggerExtensions {
     public static Xamarin.Forms.EventTrigger BindingContext(this Xamarin.Forms.EventTrigger obj, System.Object value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.EventTrigger.BindingContextProperty, value);
     public static Xamarin.Forms.EventTrigger BindingContext(this Xamarin.Forms.EventTrigger obj, BindableValue<System.Object> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.EventTrigger.BindingContextProperty, value, mode);
     public static Xamarin.Forms.EventTrigger BindingContext<TFrom>(this Xamarin.Forms.EventTrigger obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.EventTrigger.BindingContextProperty, value, selector);
   }
 
-  public static class TriggerExtensions {
+  public static partial class TriggerExtensions {
     public static Xamarin.Forms.Trigger BindingContext(this Xamarin.Forms.Trigger obj, System.Object value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Trigger.BindingContextProperty, value);
     public static Xamarin.Forms.Trigger BindingContext(this Xamarin.Forms.Trigger obj, BindableValue<System.Object> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Trigger.BindingContextProperty, value, mode);
     public static Xamarin.Forms.Trigger BindingContext<TFrom>(this Xamarin.Forms.Trigger obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Trigger.BindingContextProperty, value, selector);
   }
 
-  public static class DataTriggerExtensions {
+  public static partial class DataTriggerExtensions {
     public static Xamarin.Forms.DataTrigger BindingContext(this Xamarin.Forms.DataTrigger obj, System.Object value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.DataTrigger.BindingContextProperty, value);
     public static Xamarin.Forms.DataTrigger BindingContext(this Xamarin.Forms.DataTrigger obj, BindableValue<System.Object> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.DataTrigger.BindingContextProperty, value, mode);
     public static Xamarin.Forms.DataTrigger BindingContext<TFrom>(this Xamarin.Forms.DataTrigger obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.DataTrigger.BindingContextProperty, value, selector);
   }
 
-  public static class MultiTriggerExtensions {
+  public static partial class MultiTriggerExtensions {
     public static Xamarin.Forms.MultiTrigger BindingContext(this Xamarin.Forms.MultiTrigger obj, System.Object value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MultiTrigger.BindingContextProperty, value);
     public static Xamarin.Forms.MultiTrigger BindingContext(this Xamarin.Forms.MultiTrigger obj, BindableValue<System.Object> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MultiTrigger.BindingContextProperty, value, mode);
     public static Xamarin.Forms.MultiTrigger BindingContext<TFrom>(this Xamarin.Forms.MultiTrigger obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MultiTrigger.BindingContextProperty, value, selector);
   }
 
-  public static class AppLinkEntryExtensions {
+  public static partial class AppLinkEntryExtensions {
     public static Xamarin.Forms.AppLinkEntry Title(this Xamarin.Forms.AppLinkEntry obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.AppLinkEntry.TitleProperty, value);
     public static Xamarin.Forms.AppLinkEntry Title(this Xamarin.Forms.AppLinkEntry obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.AppLinkEntry.TitleProperty, value, mode);
     public static Xamarin.Forms.AppLinkEntry Title<TFrom>(this Xamarin.Forms.AppLinkEntry obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.AppLinkEntry.TitleProperty, value, selector);
@@ -191,7 +191,7 @@ namespace Clarity {
     public static Xamarin.Forms.AppLinkEntry BindingContext<TFrom>(this Xamarin.Forms.AppLinkEntry obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.AppLinkEntry.BindingContextProperty, value, selector);
   }
 
-  public static class EntryCellExtensions {
+  public static partial class EntryCellExtensions {
     public static Xamarin.Forms.EntryCell Text(this Xamarin.Forms.EntryCell obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.EntryCell.TextProperty, value);
     public static Xamarin.Forms.EntryCell Text(this Xamarin.Forms.EntryCell obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.EntryCell.TextProperty, value, mode);
     public static Xamarin.Forms.EntryCell Text<TFrom>(this Xamarin.Forms.EntryCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.EntryCell.TextProperty, value, selector);
@@ -224,7 +224,7 @@ namespace Clarity {
     public static Xamarin.Forms.EntryCell BindingContext<TFrom>(this Xamarin.Forms.EntryCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.EntryCell.BindingContextProperty, value, selector);
   }
 
-  public static class MenuItemExtensions {
+  public static partial class MenuItemExtensions {
     public static Xamarin.Forms.MenuItem Text(this Xamarin.Forms.MenuItem obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MenuItem.TextProperty, value);
     public static Xamarin.Forms.MenuItem Text(this Xamarin.Forms.MenuItem obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MenuItem.TextProperty, value, mode);
     public static Xamarin.Forms.MenuItem Text<TFrom>(this Xamarin.Forms.MenuItem obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MenuItem.TextProperty, value, selector);
@@ -252,7 +252,7 @@ namespace Clarity {
     public static Xamarin.Forms.MenuItem BindingContext<TFrom>(this Xamarin.Forms.MenuItem obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MenuItem.BindingContextProperty, value, selector);
   }
 
-  public static class PanGestureRecognizerExtensions {
+  public static partial class PanGestureRecognizerExtensions {
     public static Xamarin.Forms.PanGestureRecognizer TouchPoints(this Xamarin.Forms.PanGestureRecognizer obj, System.Int32 value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.PanGestureRecognizer.TouchPointsProperty, value);
     public static Xamarin.Forms.PanGestureRecognizer TouchPoints(this Xamarin.Forms.PanGestureRecognizer obj, BindableValue<System.Int32> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.PanGestureRecognizer.TouchPointsProperty, value, mode);
     public static Xamarin.Forms.PanGestureRecognizer TouchPoints<TFrom>(this Xamarin.Forms.PanGestureRecognizer obj, BindableValue<TFrom> value, System.Func<TFrom, System.Int32> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.PanGestureRecognizer.TouchPointsProperty, value, selector);
@@ -264,7 +264,7 @@ namespace Clarity {
     public static Xamarin.Forms.PanGestureRecognizer BindingContext<TFrom>(this Xamarin.Forms.PanGestureRecognizer obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.PanGestureRecognizer.BindingContextProperty, value, selector);
   }
 
-  public static class TableRootExtensions {
+  public static partial class TableRootExtensions {
     public static Xamarin.Forms.TableRoot Title(this Xamarin.Forms.TableRoot obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableRoot.TitleProperty, value);
     public static Xamarin.Forms.TableRoot Title(this Xamarin.Forms.TableRoot obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableRoot.TitleProperty, value, mode);
     public static Xamarin.Forms.TableRoot Title<TFrom>(this Xamarin.Forms.TableRoot obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableRoot.TitleProperty, value, selector);
@@ -273,7 +273,7 @@ namespace Clarity {
     public static Xamarin.Forms.TableRoot BindingContext<TFrom>(this Xamarin.Forms.TableRoot obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableRoot.BindingContextProperty, value, selector);
   }
 
-  public static class TapGestureRecognizerExtensions {
+  public static partial class TapGestureRecognizerExtensions {
     public static Xamarin.Forms.TapGestureRecognizer Command(this Xamarin.Forms.TapGestureRecognizer obj, System.Windows.Input.ICommand value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TapGestureRecognizer.CommandProperty, value);
     public static Xamarin.Forms.TapGestureRecognizer Command(this Xamarin.Forms.TapGestureRecognizer obj, BindableValue<System.Windows.Input.ICommand> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TapGestureRecognizer.CommandProperty, value, mode);
     public static Xamarin.Forms.TapGestureRecognizer Command<TFrom>(this Xamarin.Forms.TapGestureRecognizer obj, BindableValue<TFrom> value, System.Func<TFrom, System.Windows.Input.ICommand> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TapGestureRecognizer.CommandProperty, value, selector);
@@ -298,7 +298,7 @@ namespace Clarity {
     public static Xamarin.Forms.TapGestureRecognizer BindingContext<TFrom>(this Xamarin.Forms.TapGestureRecognizer obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TapGestureRecognizer.BindingContextProperty, value, selector);
   }
 
-  public static class ViewExtensions {
+  public static partial class ViewExtensions {
     public static Xamarin.Forms.View VerticalOptions(this Xamarin.Forms.View obj, Xamarin.Forms.LayoutOptions value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.View.VerticalOptionsProperty, value);
     public static Xamarin.Forms.View VerticalOptions(this Xamarin.Forms.View obj, BindableValue<Xamarin.Forms.LayoutOptions> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.View.VerticalOptionsProperty, value, mode);
     public static Xamarin.Forms.View VerticalOptions<TFrom>(this Xamarin.Forms.View obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.LayoutOptions> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.View.VerticalOptionsProperty, value, selector);
@@ -394,7 +394,7 @@ namespace Clarity {
     public static Xamarin.Forms.View BindingContext<TFrom>(this Xamarin.Forms.View obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.View.BindingContextProperty, value, selector);
   }
 
-  public static class PageExtensions {
+  public static partial class PageExtensions {
     public static Xamarin.Forms.Page BackgroundImage(this Xamarin.Forms.Page obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Page.BackgroundImageProperty, value);
     public static Xamarin.Forms.Page BackgroundImage(this Xamarin.Forms.Page obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Page.BackgroundImageProperty, value, mode);
     public static Xamarin.Forms.Page BackgroundImage<TFrom>(this Xamarin.Forms.Page obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Page.BackgroundImageProperty, value, selector);
@@ -496,7 +496,7 @@ namespace Clarity {
     public static Xamarin.Forms.Page BindingContext<TFrom>(this Xamarin.Forms.Page obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Page.BindingContextProperty, value, selector);
   }
 
-  public static class SwitchCellExtensions {
+  public static partial class SwitchCellExtensions {
     public static Xamarin.Forms.SwitchCell On(this Xamarin.Forms.SwitchCell obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.SwitchCell.OnProperty, value);
     public static Xamarin.Forms.SwitchCell On(this Xamarin.Forms.SwitchCell obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.SwitchCell.OnProperty, value, mode);
     public static Xamarin.Forms.SwitchCell On<TFrom>(this Xamarin.Forms.SwitchCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.SwitchCell.OnProperty, value, selector);
@@ -514,7 +514,7 @@ namespace Clarity {
     public static Xamarin.Forms.SwitchCell BindingContext<TFrom>(this Xamarin.Forms.SwitchCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.SwitchCell.BindingContextProperty, value, selector);
   }
 
-  public static class TextCellExtensions {
+  public static partial class TextCellExtensions {
     public static Xamarin.Forms.TextCell Command(this Xamarin.Forms.TextCell obj, System.Windows.Input.ICommand value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TextCell.CommandProperty, value);
     public static Xamarin.Forms.TextCell Command(this Xamarin.Forms.TextCell obj, BindableValue<System.Windows.Input.ICommand> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TextCell.CommandProperty, value, mode);
     public static Xamarin.Forms.TextCell Command<TFrom>(this Xamarin.Forms.TextCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.Windows.Input.ICommand> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TextCell.CommandProperty, value, selector);
@@ -545,7 +545,7 @@ namespace Clarity {
     public static Xamarin.Forms.TextCell BindingContext<TFrom>(this Xamarin.Forms.TextCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TextCell.BindingContextProperty, value, selector);
   }
 
-  public static class ViewCellExtensions {
+  public static partial class ViewCellExtensions {
     public static Xamarin.Forms.ViewCell IsEnabled(this Xamarin.Forms.ViewCell obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ViewCell.IsEnabledProperty, value);
     public static Xamarin.Forms.ViewCell IsEnabled(this Xamarin.Forms.ViewCell obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ViewCell.IsEnabledProperty, value, mode);
     public static Xamarin.Forms.ViewCell IsEnabled<TFrom>(this Xamarin.Forms.ViewCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ViewCell.IsEnabledProperty, value, selector);
@@ -557,7 +557,7 @@ namespace Clarity {
     public static Xamarin.Forms.ViewCell BindingContext<TFrom>(this Xamarin.Forms.ViewCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ViewCell.BindingContextProperty, value, selector);
   }
 
-  public static class TableSectionExtensions {
+  public static partial class TableSectionExtensions {
     public static Xamarin.Forms.TableSection Title(this Xamarin.Forms.TableSection obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableSection.TitleProperty, value);
     public static Xamarin.Forms.TableSection Title(this Xamarin.Forms.TableSection obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableSection.TitleProperty, value, mode);
     public static Xamarin.Forms.TableSection Title<TFrom>(this Xamarin.Forms.TableSection obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableSection.TitleProperty, value, selector);
@@ -566,7 +566,7 @@ namespace Clarity {
     public static Xamarin.Forms.TableSection BindingContext<TFrom>(this Xamarin.Forms.TableSection obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableSection.BindingContextProperty, value, selector);
   }
 
-  public static class UriImageSourceExtensions {
+  public static partial class UriImageSourceExtensions {
     public static Xamarin.Forms.UriImageSource Uri(this Xamarin.Forms.UriImageSource obj, System.Uri value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.UriImageSource.UriProperty, value);
     public static Xamarin.Forms.UriImageSource Uri(this Xamarin.Forms.UriImageSource obj, BindableValue<System.Uri> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.UriImageSource.UriProperty, value, mode);
     public static Xamarin.Forms.UriImageSource Uri<TFrom>(this Xamarin.Forms.UriImageSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.Uri> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.UriImageSource.UriProperty, value, selector);
@@ -578,7 +578,7 @@ namespace Clarity {
     public static Xamarin.Forms.UriImageSource BindingContext<TFrom>(this Xamarin.Forms.UriImageSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.UriImageSource.BindingContextProperty, value, selector);
   }
 
-  public static class FileImageSourceExtensions {
+  public static partial class FileImageSourceExtensions {
     public static Xamarin.Forms.FileImageSource File(this Xamarin.Forms.FileImageSource obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.FileImageSource.FileProperty, value);
     public static Xamarin.Forms.FileImageSource File(this Xamarin.Forms.FileImageSource obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.FileImageSource.FileProperty, value, mode);
     public static Xamarin.Forms.FileImageSource File<TFrom>(this Xamarin.Forms.FileImageSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.FileImageSource.FileProperty, value, selector);
@@ -590,7 +590,7 @@ namespace Clarity {
     public static Xamarin.Forms.FileImageSource BindingContext<TFrom>(this Xamarin.Forms.FileImageSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.FileImageSource.BindingContextProperty, value, selector);
   }
 
-  public static class StreamImageSourceExtensions {
+  public static partial class StreamImageSourceExtensions {
     public static Xamarin.Forms.StreamImageSource Stream(this Xamarin.Forms.StreamImageSource obj, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<System.IO.Stream>> value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.StreamImageSource.StreamProperty, value);
     public static Xamarin.Forms.StreamImageSource Stream(this Xamarin.Forms.StreamImageSource obj, BindableValue<System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<System.IO.Stream>>> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.StreamImageSource.StreamProperty, value, mode);
     public static Xamarin.Forms.StreamImageSource Stream<TFrom>(this Xamarin.Forms.StreamImageSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<System.IO.Stream>>> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.StreamImageSource.StreamProperty, value, selector);
@@ -602,7 +602,7 @@ namespace Clarity {
     public static Xamarin.Forms.StreamImageSource BindingContext<TFrom>(this Xamarin.Forms.StreamImageSource obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.StreamImageSource.BindingContextProperty, value, selector);
   }
 
-  public static class PinchGestureRecognizerExtensions {
+  public static partial class PinchGestureRecognizerExtensions {
     public static Xamarin.Forms.PinchGestureRecognizer ClassId(this Xamarin.Forms.PinchGestureRecognizer obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.PinchGestureRecognizer.ClassIdProperty, value);
     public static Xamarin.Forms.PinchGestureRecognizer ClassId(this Xamarin.Forms.PinchGestureRecognizer obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.PinchGestureRecognizer.ClassIdProperty, value, mode);
     public static Xamarin.Forms.PinchGestureRecognizer ClassId<TFrom>(this Xamarin.Forms.PinchGestureRecognizer obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.PinchGestureRecognizer.ClassIdProperty, value, selector);
@@ -611,7 +611,7 @@ namespace Clarity {
     public static Xamarin.Forms.PinchGestureRecognizer BindingContext<TFrom>(this Xamarin.Forms.PinchGestureRecognizer obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.PinchGestureRecognizer.BindingContextProperty, value, selector);
   }
 
-  public static class ImageCellExtensions {
+  public static partial class ImageCellExtensions {
     public static Xamarin.Forms.ImageCell ImageSource(this Xamarin.Forms.ImageCell obj, Xamarin.Forms.ImageSource value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ImageCell.ImageSourceProperty, value);
     public static Xamarin.Forms.ImageCell ImageSource(this Xamarin.Forms.ImageCell obj, BindableValue<Xamarin.Forms.ImageSource> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ImageCell.ImageSourceProperty, value, mode);
     public static Xamarin.Forms.ImageCell ImageSource<TFrom>(this Xamarin.Forms.ImageCell obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.ImageSource> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ImageCell.ImageSourceProperty, value, selector);
@@ -645,7 +645,7 @@ namespace Clarity {
     public static Xamarin.Forms.ImageCell BindingContext<TFrom>(this Xamarin.Forms.ImageCell obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ImageCell.BindingContextProperty, value, selector);
   }
 
-  public static class TemplatedPageExtensions {
+  public static partial class TemplatedPageExtensions {
     public static Xamarin.Forms.TemplatedPage ControlTemplate(this Xamarin.Forms.TemplatedPage obj, Xamarin.Forms.ControlTemplate value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TemplatedPage.ControlTemplateProperty, value);
     public static Xamarin.Forms.TemplatedPage ControlTemplate(this Xamarin.Forms.TemplatedPage obj, BindableValue<Xamarin.Forms.ControlTemplate> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TemplatedPage.ControlTemplateProperty, value, mode);
     public static Xamarin.Forms.TemplatedPage ControlTemplate<TFrom>(this Xamarin.Forms.TemplatedPage obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.ControlTemplate> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TemplatedPage.ControlTemplateProperty, value, selector);
@@ -750,7 +750,7 @@ namespace Clarity {
     public static Xamarin.Forms.TemplatedPage BindingContext<TFrom>(this Xamarin.Forms.TemplatedPage obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TemplatedPage.BindingContextProperty, value, selector);
   }
 
-  public static class NavigationPageExtensions {
+  public static partial class NavigationPageExtensions {
     public static Xamarin.Forms.NavigationPage Tint(this Xamarin.Forms.NavigationPage obj, Xamarin.Forms.Color value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.NavigationPage.TintProperty, value);
     public static Xamarin.Forms.NavigationPage Tint(this Xamarin.Forms.NavigationPage obj, BindableValue<Xamarin.Forms.Color> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.NavigationPage.TintProperty, value, mode);
     public static Xamarin.Forms.NavigationPage Tint<TFrom>(this Xamarin.Forms.NavigationPage obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.Color> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.NavigationPage.TintProperty, value, selector);
@@ -867,7 +867,7 @@ namespace Clarity {
     public static Xamarin.Forms.NavigationPage BindingContext<TFrom>(this Xamarin.Forms.NavigationPage obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.NavigationPage.BindingContextProperty, value, selector);
   }
 
-  public static class ToolbarItemExtensions {
+  public static partial class ToolbarItemExtensions {
     public static Xamarin.Forms.ToolbarItem Text(this Xamarin.Forms.ToolbarItem obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ToolbarItem.TextProperty, value);
     public static Xamarin.Forms.ToolbarItem Text(this Xamarin.Forms.ToolbarItem obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ToolbarItem.TextProperty, value, mode);
     public static Xamarin.Forms.ToolbarItem Text<TFrom>(this Xamarin.Forms.ToolbarItem obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ToolbarItem.TextProperty, value, selector);
@@ -895,7 +895,7 @@ namespace Clarity {
     public static Xamarin.Forms.ToolbarItem BindingContext<TFrom>(this Xamarin.Forms.ToolbarItem obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ToolbarItem.BindingContextProperty, value, selector);
   }
 
-  public static class TableViewExtensions {
+  public static partial class TableViewExtensions {
     public static Xamarin.Forms.TableView RowHeight(this Xamarin.Forms.TableView obj, System.Int32 value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableView.RowHeightProperty, value);
     public static Xamarin.Forms.TableView RowHeight(this Xamarin.Forms.TableView obj, BindableValue<System.Int32> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableView.RowHeightProperty, value, mode);
     public static Xamarin.Forms.TableView RowHeight<TFrom>(this Xamarin.Forms.TableView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Int32> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableView.RowHeightProperty, value, selector);
@@ -997,7 +997,7 @@ namespace Clarity {
     public static Xamarin.Forms.TableView BindingContext<TFrom>(this Xamarin.Forms.TableView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TableView.BindingContextProperty, value, selector);
   }
 
-  public static class ActivityIndicatorExtensions {
+  public static partial class ActivityIndicatorExtensions {
     public static Xamarin.Forms.ActivityIndicator IsRunning(this Xamarin.Forms.ActivityIndicator obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ActivityIndicator.IsRunningProperty, value);
     public static Xamarin.Forms.ActivityIndicator IsRunning(this Xamarin.Forms.ActivityIndicator obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ActivityIndicator.IsRunningProperty, value, mode);
     public static Xamarin.Forms.ActivityIndicator IsRunning<TFrom>(this Xamarin.Forms.ActivityIndicator obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ActivityIndicator.IsRunningProperty, value, selector);
@@ -1099,7 +1099,7 @@ namespace Clarity {
     public static Xamarin.Forms.ActivityIndicator BindingContext<TFrom>(this Xamarin.Forms.ActivityIndicator obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ActivityIndicator.BindingContextProperty, value, selector);
   }
 
-  public static class BoxViewExtensions {
+  public static partial class BoxViewExtensions {
     public static Xamarin.Forms.BoxView Color(this Xamarin.Forms.BoxView obj, Xamarin.Forms.Color value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.BoxView.ColorProperty, value);
     public static Xamarin.Forms.BoxView Color(this Xamarin.Forms.BoxView obj, BindableValue<Xamarin.Forms.Color> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.BoxView.ColorProperty, value, mode);
     public static Xamarin.Forms.BoxView Color<TFrom>(this Xamarin.Forms.BoxView obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.Color> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.BoxView.ColorProperty, value, selector);
@@ -1198,7 +1198,7 @@ namespace Clarity {
     public static Xamarin.Forms.BoxView BindingContext<TFrom>(this Xamarin.Forms.BoxView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.BoxView.BindingContextProperty, value, selector);
   }
 
-  public static class ButtonExtensions {
+  public static partial class ButtonExtensions {
     public static Xamarin.Forms.Button Command(this Xamarin.Forms.Button obj, System.Windows.Input.ICommand value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Button.CommandProperty, value);
     public static Xamarin.Forms.Button Command(this Xamarin.Forms.Button obj, BindableValue<System.Windows.Input.ICommand> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Button.CommandProperty, value, mode);
     public static Xamarin.Forms.Button Command<TFrom>(this Xamarin.Forms.Button obj, BindableValue<TFrom> value, System.Func<TFrom, System.Windows.Input.ICommand> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Button.CommandProperty, value, selector);
@@ -1334,7 +1334,7 @@ namespace Clarity {
     public static Xamarin.Forms.Button BindingContext<TFrom>(this Xamarin.Forms.Button obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Button.BindingContextProperty, value, selector);
   }
 
-  public static class DatePickerExtensions {
+  public static partial class DatePickerExtensions {
     public static Xamarin.Forms.DatePicker Format(this Xamarin.Forms.DatePicker obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.DatePicker.FormatProperty, value);
     public static Xamarin.Forms.DatePicker Format(this Xamarin.Forms.DatePicker obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.DatePicker.FormatProperty, value, mode);
     public static Xamarin.Forms.DatePicker Format<TFrom>(this Xamarin.Forms.DatePicker obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.DatePicker.FormatProperty, value, selector);
@@ -1445,7 +1445,7 @@ namespace Clarity {
     public static Xamarin.Forms.DatePicker BindingContext<TFrom>(this Xamarin.Forms.DatePicker obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.DatePicker.BindingContextProperty, value, selector);
   }
 
-  public static class ImageExtensions {
+  public static partial class ImageExtensions {
     public static Xamarin.Forms.Image Source(this Xamarin.Forms.Image obj, Xamarin.Forms.ImageSource value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Image.SourceProperty, value);
     public static Xamarin.Forms.Image Source(this Xamarin.Forms.Image obj, BindableValue<Xamarin.Forms.ImageSource> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Image.SourceProperty, value, mode);
     public static Xamarin.Forms.Image Source<TFrom>(this Xamarin.Forms.Image obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.ImageSource> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Image.SourceProperty, value, selector);
@@ -1553,7 +1553,7 @@ namespace Clarity {
     public static Xamarin.Forms.Image BindingContext<TFrom>(this Xamarin.Forms.Image obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Image.BindingContextProperty, value, selector);
   }
 
-  public static class InputViewExtensions {
+  public static partial class InputViewExtensions {
     public static Xamarin.Forms.InputView Keyboard(this Xamarin.Forms.InputView obj, Xamarin.Forms.Keyboard value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.InputView.KeyboardProperty, value);
     public static Xamarin.Forms.InputView Keyboard(this Xamarin.Forms.InputView obj, BindableValue<Xamarin.Forms.Keyboard> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.InputView.KeyboardProperty, value, mode);
     public static Xamarin.Forms.InputView Keyboard<TFrom>(this Xamarin.Forms.InputView obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.Keyboard> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.InputView.KeyboardProperty, value, selector);
@@ -1652,7 +1652,7 @@ namespace Clarity {
     public static Xamarin.Forms.InputView BindingContext<TFrom>(this Xamarin.Forms.InputView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.InputView.BindingContextProperty, value, selector);
   }
 
-  public static class LabelExtensions {
+  public static partial class LabelExtensions {
     public static Xamarin.Forms.Label HorizontalTextAlignment(this Xamarin.Forms.Label obj, Xamarin.Forms.TextAlignment value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Label.HorizontalTextAlignmentProperty, value);
     public static Xamarin.Forms.Label HorizontalTextAlignment(this Xamarin.Forms.Label obj, BindableValue<Xamarin.Forms.TextAlignment> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Label.HorizontalTextAlignmentProperty, value, mode);
     public static Xamarin.Forms.Label HorizontalTextAlignment<TFrom>(this Xamarin.Forms.Label obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.TextAlignment> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Label.HorizontalTextAlignmentProperty, value, selector);
@@ -1784,7 +1784,7 @@ namespace Clarity {
     public static Xamarin.Forms.Label BindingContext<TFrom>(this Xamarin.Forms.Label obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Label.BindingContextProperty, value, selector);
   }
 
-  public static class MasterDetailPageExtensions {
+  public static partial class MasterDetailPageExtensions {
     public static Xamarin.Forms.MasterDetailPage IsGestureEnabled(this Xamarin.Forms.MasterDetailPage obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty, value);
     public static Xamarin.Forms.MasterDetailPage IsGestureEnabled(this Xamarin.Forms.MasterDetailPage obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty, value, mode);
     public static Xamarin.Forms.MasterDetailPage IsGestureEnabled<TFrom>(this Xamarin.Forms.MasterDetailPage obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty, value, selector);
@@ -1895,7 +1895,7 @@ namespace Clarity {
     public static Xamarin.Forms.MasterDetailPage BindingContext<TFrom>(this Xamarin.Forms.MasterDetailPage obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.MasterDetailPage.BindingContextProperty, value, selector);
   }
 
-  public static class OpenGLViewExtensions {
+  public static partial class OpenGLViewExtensions {
     public static Xamarin.Forms.OpenGLView HasRenderLoop(this Xamarin.Forms.OpenGLView obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.OpenGLView.HasRenderLoopProperty, value);
     public static Xamarin.Forms.OpenGLView HasRenderLoop(this Xamarin.Forms.OpenGLView obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.OpenGLView.HasRenderLoopProperty, value, mode);
     public static Xamarin.Forms.OpenGLView HasRenderLoop<TFrom>(this Xamarin.Forms.OpenGLView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.OpenGLView.HasRenderLoopProperty, value, selector);
@@ -1994,7 +1994,7 @@ namespace Clarity {
     public static Xamarin.Forms.OpenGLView BindingContext<TFrom>(this Xamarin.Forms.OpenGLView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.OpenGLView.BindingContextProperty, value, selector);
   }
 
-  public static class ProgressBarExtensions {
+  public static partial class ProgressBarExtensions {
     public static Xamarin.Forms.ProgressBar Progress(this Xamarin.Forms.ProgressBar obj, System.Double value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ProgressBar.ProgressProperty, value);
     public static Xamarin.Forms.ProgressBar Progress(this Xamarin.Forms.ProgressBar obj, BindableValue<System.Double> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ProgressBar.ProgressProperty, value, mode);
     public static Xamarin.Forms.ProgressBar Progress<TFrom>(this Xamarin.Forms.ProgressBar obj, BindableValue<TFrom> value, System.Func<TFrom, System.Double> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ProgressBar.ProgressProperty, value, selector);
@@ -2093,7 +2093,7 @@ namespace Clarity {
     public static Xamarin.Forms.ProgressBar BindingContext<TFrom>(this Xamarin.Forms.ProgressBar obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ProgressBar.BindingContextProperty, value, selector);
   }
 
-  public static class SearchBarExtensions {
+  public static partial class SearchBarExtensions {
     public static Xamarin.Forms.SearchBar SearchCommand(this Xamarin.Forms.SearchBar obj, System.Windows.Input.ICommand value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.SearchBar.SearchCommandProperty, value);
     public static Xamarin.Forms.SearchBar SearchCommand(this Xamarin.Forms.SearchBar obj, BindableValue<System.Windows.Input.ICommand> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.SearchBar.SearchCommandProperty, value, mode);
     public static Xamarin.Forms.SearchBar SearchCommand<TFrom>(this Xamarin.Forms.SearchBar obj, BindableValue<TFrom> value, System.Func<TFrom, System.Windows.Input.ICommand> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.SearchBar.SearchCommandProperty, value, selector);
@@ -2223,7 +2223,7 @@ namespace Clarity {
     public static Xamarin.Forms.SearchBar BindingContext<TFrom>(this Xamarin.Forms.SearchBar obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.SearchBar.BindingContextProperty, value, selector);
   }
 
-  public static class SliderExtensions {
+  public static partial class SliderExtensions {
     public static Xamarin.Forms.Slider Minimum(this Xamarin.Forms.Slider obj, System.Double value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Slider.MinimumProperty, value);
     public static Xamarin.Forms.Slider Minimum(this Xamarin.Forms.Slider obj, BindableValue<System.Double> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Slider.MinimumProperty, value, mode);
     public static Xamarin.Forms.Slider Minimum<TFrom>(this Xamarin.Forms.Slider obj, BindableValue<TFrom> value, System.Func<TFrom, System.Double> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Slider.MinimumProperty, value, selector);
@@ -2328,7 +2328,7 @@ namespace Clarity {
     public static Xamarin.Forms.Slider BindingContext<TFrom>(this Xamarin.Forms.Slider obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Slider.BindingContextProperty, value, selector);
   }
 
-  public static class StepperExtensions {
+  public static partial class StepperExtensions {
     public static Xamarin.Forms.Stepper Maximum(this Xamarin.Forms.Stepper obj, System.Double value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Stepper.MaximumProperty, value);
     public static Xamarin.Forms.Stepper Maximum(this Xamarin.Forms.Stepper obj, BindableValue<System.Double> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Stepper.MaximumProperty, value, mode);
     public static Xamarin.Forms.Stepper Maximum<TFrom>(this Xamarin.Forms.Stepper obj, BindableValue<TFrom> value, System.Func<TFrom, System.Double> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Stepper.MaximumProperty, value, selector);
@@ -2436,7 +2436,7 @@ namespace Clarity {
     public static Xamarin.Forms.Stepper BindingContext<TFrom>(this Xamarin.Forms.Stepper obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Stepper.BindingContextProperty, value, selector);
   }
 
-  public static class SwitchExtensions {
+  public static partial class SwitchExtensions {
     public static Xamarin.Forms.Switch IsToggled(this Xamarin.Forms.Switch obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Switch.IsToggledProperty, value);
     public static Xamarin.Forms.Switch IsToggled(this Xamarin.Forms.Switch obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Switch.IsToggledProperty, value, mode);
     public static Xamarin.Forms.Switch IsToggled<TFrom>(this Xamarin.Forms.Switch obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Switch.IsToggledProperty, value, selector);
@@ -2535,7 +2535,7 @@ namespace Clarity {
     public static Xamarin.Forms.Switch BindingContext<TFrom>(this Xamarin.Forms.Switch obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Switch.BindingContextProperty, value, selector);
   }
 
-  public static class TimePickerExtensions {
+  public static partial class TimePickerExtensions {
     public static Xamarin.Forms.TimePicker Format(this Xamarin.Forms.TimePicker obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TimePicker.FormatProperty, value);
     public static Xamarin.Forms.TimePicker Format(this Xamarin.Forms.TimePicker obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TimePicker.FormatProperty, value, mode);
     public static Xamarin.Forms.TimePicker Format<TFrom>(this Xamarin.Forms.TimePicker obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TimePicker.FormatProperty, value, selector);
@@ -2640,7 +2640,7 @@ namespace Clarity {
     public static Xamarin.Forms.TimePicker BindingContext<TFrom>(this Xamarin.Forms.TimePicker obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TimePicker.BindingContextProperty, value, selector);
   }
 
-  public static class WebViewExtensions {
+  public static partial class WebViewExtensions {
     public static Xamarin.Forms.WebView Source(this Xamarin.Forms.WebView obj, Xamarin.Forms.WebViewSource value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.WebView.SourceProperty, value);
     public static Xamarin.Forms.WebView Source(this Xamarin.Forms.WebView obj, BindableValue<Xamarin.Forms.WebViewSource> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.WebView.SourceProperty, value, mode);
     public static Xamarin.Forms.WebView Source<TFrom>(this Xamarin.Forms.WebView obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.WebViewSource> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.WebView.SourceProperty, value, selector);
@@ -2745,7 +2745,7 @@ namespace Clarity {
     public static Xamarin.Forms.WebView BindingContext<TFrom>(this Xamarin.Forms.WebView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.WebView.BindingContextProperty, value, selector);
   }
 
-  public static class PickerExtensions {
+  public static partial class PickerExtensions {
     public static Xamarin.Forms.Picker TextColor(this Xamarin.Forms.Picker obj, Xamarin.Forms.Color value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Picker.TextColorProperty, value);
     public static Xamarin.Forms.Picker TextColor(this Xamarin.Forms.Picker obj, BindableValue<Xamarin.Forms.Color> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Picker.TextColorProperty, value, mode);
     public static Xamarin.Forms.Picker TextColor<TFrom>(this Xamarin.Forms.Picker obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.Color> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Picker.TextColorProperty, value, selector);
@@ -2856,7 +2856,7 @@ namespace Clarity {
     public static Xamarin.Forms.Picker BindingContext<TFrom>(this Xamarin.Forms.Picker obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Picker.BindingContextProperty, value, selector);
   }
 
-  public static class NavigationMenuExtensions {
+  public static partial class NavigationMenuExtensions {
     public static Xamarin.Forms.Internals.NavigationMenu VerticalOptions(this Xamarin.Forms.Internals.NavigationMenu obj, Xamarin.Forms.LayoutOptions value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Internals.NavigationMenu.VerticalOptionsProperty, value);
     public static Xamarin.Forms.Internals.NavigationMenu VerticalOptions(this Xamarin.Forms.Internals.NavigationMenu obj, BindableValue<Xamarin.Forms.LayoutOptions> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Internals.NavigationMenu.VerticalOptionsProperty, value, mode);
     public static Xamarin.Forms.Internals.NavigationMenu VerticalOptions<TFrom>(this Xamarin.Forms.Internals.NavigationMenu obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.LayoutOptions> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Internals.NavigationMenu.VerticalOptionsProperty, value, selector);
@@ -2952,7 +2952,7 @@ namespace Clarity {
     public static Xamarin.Forms.Internals.NavigationMenu BindingContext<TFrom>(this Xamarin.Forms.Internals.NavigationMenu obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Internals.NavigationMenu.BindingContextProperty, value, selector);
   }
 
-  public static class ContentPresenterExtensions {
+  public static partial class ContentPresenterExtensions {
     public static Xamarin.Forms.ContentPresenter Content(this Xamarin.Forms.ContentPresenter obj, Xamarin.Forms.View value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentPresenter.ContentProperty, value);
     public static Xamarin.Forms.ContentPresenter Content(this Xamarin.Forms.ContentPresenter obj, BindableValue<Xamarin.Forms.View> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentPresenter.ContentProperty, value, mode);
     public static Xamarin.Forms.ContentPresenter Content<TFrom>(this Xamarin.Forms.ContentPresenter obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.View> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentPresenter.ContentProperty, value, selector);
@@ -3057,7 +3057,7 @@ namespace Clarity {
     public static Xamarin.Forms.ContentPresenter BindingContext<TFrom>(this Xamarin.Forms.ContentPresenter obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentPresenter.BindingContextProperty, value, selector);
   }
 
-  public static class TemplatedViewExtensions {
+  public static partial class TemplatedViewExtensions {
     public static Xamarin.Forms.TemplatedView ControlTemplate(this Xamarin.Forms.TemplatedView obj, Xamarin.Forms.ControlTemplate value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TemplatedView.ControlTemplateProperty, value);
     public static Xamarin.Forms.TemplatedView ControlTemplate(this Xamarin.Forms.TemplatedView obj, BindableValue<Xamarin.Forms.ControlTemplate> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TemplatedView.ControlTemplateProperty, value, mode);
     public static Xamarin.Forms.TemplatedView ControlTemplate<TFrom>(this Xamarin.Forms.TemplatedView obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.ControlTemplate> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TemplatedView.ControlTemplateProperty, value, selector);
@@ -3162,7 +3162,7 @@ namespace Clarity {
     public static Xamarin.Forms.TemplatedView BindingContext<TFrom>(this Xamarin.Forms.TemplatedView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TemplatedView.BindingContextProperty, value, selector);
   }
 
-  public static class CarouselPageExtensions {
+  public static partial class CarouselPageExtensions {
     public static Xamarin.Forms.CarouselPage ItemsSource(this Xamarin.Forms.CarouselPage obj, System.Collections.IEnumerable value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.CarouselPage.ItemsSourceProperty, value);
     public static Xamarin.Forms.CarouselPage ItemsSource(this Xamarin.Forms.CarouselPage obj, BindableValue<System.Collections.IEnumerable> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.CarouselPage.ItemsSourceProperty, value, mode);
     public static Xamarin.Forms.CarouselPage ItemsSource<TFrom>(this Xamarin.Forms.CarouselPage obj, BindableValue<TFrom> value, System.Func<TFrom, System.Collections.IEnumerable> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.CarouselPage.ItemsSourceProperty, value, selector);
@@ -3273,7 +3273,7 @@ namespace Clarity {
     public static Xamarin.Forms.CarouselPage BindingContext<TFrom>(this Xamarin.Forms.CarouselPage obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.CarouselPage.BindingContextProperty, value, selector);
   }
 
-  public static class ListViewExtensions {
+  public static partial class ListViewExtensions {
     public static Xamarin.Forms.ListView IsPullToRefreshEnabled(this Xamarin.Forms.ListView obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ListView.IsPullToRefreshEnabledProperty, value);
     public static Xamarin.Forms.ListView IsPullToRefreshEnabled(this Xamarin.Forms.ListView obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ListView.IsPullToRefreshEnabledProperty, value, mode);
     public static Xamarin.Forms.ListView IsPullToRefreshEnabled<TFrom>(this Xamarin.Forms.ListView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ListView.IsPullToRefreshEnabledProperty, value, selector);
@@ -3418,7 +3418,7 @@ namespace Clarity {
     public static Xamarin.Forms.ListView BindingContext<TFrom>(this Xamarin.Forms.ListView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ListView.BindingContextProperty, value, selector);
   }
 
-  public static class EditorExtensions {
+  public static partial class EditorExtensions {
     public static Xamarin.Forms.Editor Text(this Xamarin.Forms.Editor obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Editor.TextProperty, value);
     public static Xamarin.Forms.Editor Text(this Xamarin.Forms.Editor obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Editor.TextProperty, value, mode);
     public static Xamarin.Forms.Editor Text<TFrom>(this Xamarin.Forms.Editor obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Editor.TextProperty, value, selector);
@@ -3532,7 +3532,7 @@ namespace Clarity {
     public static Xamarin.Forms.Editor BindingContext<TFrom>(this Xamarin.Forms.Editor obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Editor.BindingContextProperty, value, selector);
   }
 
-  public static class EntryExtensions {
+  public static partial class EntryExtensions {
     public static Xamarin.Forms.Entry Placeholder(this Xamarin.Forms.Entry obj, System.String value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Entry.PlaceholderProperty, value);
     public static Xamarin.Forms.Entry Placeholder(this Xamarin.Forms.Entry obj, BindableValue<System.String> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Entry.PlaceholderProperty, value, mode);
     public static Xamarin.Forms.Entry Placeholder<TFrom>(this Xamarin.Forms.Entry obj, BindableValue<TFrom> value, System.Func<TFrom, System.String> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Entry.PlaceholderProperty, value, selector);
@@ -3658,7 +3658,7 @@ namespace Clarity {
     public static Xamarin.Forms.Entry BindingContext<TFrom>(this Xamarin.Forms.Entry obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Entry.BindingContextProperty, value, selector);
   }
 
-  public static class ScrollViewExtensions {
+  public static partial class ScrollViewExtensions {
     public static Xamarin.Forms.ScrollView Orientation(this Xamarin.Forms.ScrollView obj, Xamarin.Forms.ScrollOrientation value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ScrollView.OrientationProperty, value);
     public static Xamarin.Forms.ScrollView Orientation(this Xamarin.Forms.ScrollView obj, BindableValue<Xamarin.Forms.ScrollOrientation> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ScrollView.OrientationProperty, value, mode);
     public static Xamarin.Forms.ScrollView Orientation<TFrom>(this Xamarin.Forms.ScrollView obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.ScrollOrientation> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ScrollView.OrientationProperty, value, selector);
@@ -3772,7 +3772,7 @@ namespace Clarity {
     public static Xamarin.Forms.ScrollView BindingContext<TFrom>(this Xamarin.Forms.ScrollView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ScrollView.BindingContextProperty, value, selector);
   }
 
-  public static class TabbedPageExtensions {
+  public static partial class TabbedPageExtensions {
     public static Xamarin.Forms.TabbedPage BarBackgroundColor(this Xamarin.Forms.TabbedPage obj, Xamarin.Forms.Color value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TabbedPage.BarBackgroundColorProperty, value);
     public static Xamarin.Forms.TabbedPage BarBackgroundColor(this Xamarin.Forms.TabbedPage obj, BindableValue<Xamarin.Forms.Color> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TabbedPage.BarBackgroundColorProperty, value, mode);
     public static Xamarin.Forms.TabbedPage BarBackgroundColor<TFrom>(this Xamarin.Forms.TabbedPage obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.Color> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TabbedPage.BarBackgroundColorProperty, value, selector);
@@ -3889,7 +3889,7 @@ namespace Clarity {
     public static Xamarin.Forms.TabbedPage BindingContext<TFrom>(this Xamarin.Forms.TabbedPage obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.TabbedPage.BindingContextProperty, value, selector);
   }
 
-  public static class ContentPageExtensions {
+  public static partial class ContentPageExtensions {
     public static Xamarin.Forms.ContentPage Content(this Xamarin.Forms.ContentPage obj, Xamarin.Forms.View value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentPage.ContentProperty, value);
     public static Xamarin.Forms.ContentPage Content(this Xamarin.Forms.ContentPage obj, BindableValue<Xamarin.Forms.View> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentPage.ContentProperty, value, mode);
     public static Xamarin.Forms.ContentPage Content<TFrom>(this Xamarin.Forms.ContentPage obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.View> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentPage.ContentProperty, value, selector);
@@ -3997,7 +3997,7 @@ namespace Clarity {
     public static Xamarin.Forms.ContentPage BindingContext<TFrom>(this Xamarin.Forms.ContentPage obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentPage.BindingContextProperty, value, selector);
   }
 
-  public static class AbsoluteLayoutExtensions {
+  public static partial class AbsoluteLayoutExtensions {
     public static Xamarin.Forms.AbsoluteLayout IsClippedToBounds(this Xamarin.Forms.AbsoluteLayout obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.AbsoluteLayout.IsClippedToBoundsProperty, value);
     public static Xamarin.Forms.AbsoluteLayout IsClippedToBounds(this Xamarin.Forms.AbsoluteLayout obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.AbsoluteLayout.IsClippedToBoundsProperty, value, mode);
     public static Xamarin.Forms.AbsoluteLayout IsClippedToBounds<TFrom>(this Xamarin.Forms.AbsoluteLayout obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.AbsoluteLayout.IsClippedToBoundsProperty, value, selector);
@@ -4099,7 +4099,7 @@ namespace Clarity {
     public static Xamarin.Forms.AbsoluteLayout BindingContext<TFrom>(this Xamarin.Forms.AbsoluteLayout obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.AbsoluteLayout.BindingContextProperty, value, selector);
   }
 
-  public static class ContentViewExtensions {
+  public static partial class ContentViewExtensions {
     public static Xamarin.Forms.ContentView Content(this Xamarin.Forms.ContentView obj, Xamarin.Forms.View value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentView.ContentProperty, value);
     public static Xamarin.Forms.ContentView Content(this Xamarin.Forms.ContentView obj, BindableValue<Xamarin.Forms.View> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentView.ContentProperty, value, mode);
     public static Xamarin.Forms.ContentView Content<TFrom>(this Xamarin.Forms.ContentView obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.View> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentView.ContentProperty, value, selector);
@@ -4207,7 +4207,7 @@ namespace Clarity {
     public static Xamarin.Forms.ContentView BindingContext<TFrom>(this Xamarin.Forms.ContentView obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.ContentView.BindingContextProperty, value, selector);
   }
 
-  public static class RelativeLayoutExtensions {
+  public static partial class RelativeLayoutExtensions {
     public static Xamarin.Forms.RelativeLayout IsClippedToBounds(this Xamarin.Forms.RelativeLayout obj, System.Boolean value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.RelativeLayout.IsClippedToBoundsProperty, value);
     public static Xamarin.Forms.RelativeLayout IsClippedToBounds(this Xamarin.Forms.RelativeLayout obj, BindableValue<System.Boolean> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.RelativeLayout.IsClippedToBoundsProperty, value, mode);
     public static Xamarin.Forms.RelativeLayout IsClippedToBounds<TFrom>(this Xamarin.Forms.RelativeLayout obj, BindableValue<TFrom> value, System.Func<TFrom, System.Boolean> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.RelativeLayout.IsClippedToBoundsProperty, value, selector);
@@ -4309,7 +4309,7 @@ namespace Clarity {
     public static Xamarin.Forms.RelativeLayout BindingContext<TFrom>(this Xamarin.Forms.RelativeLayout obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.RelativeLayout.BindingContextProperty, value, selector);
   }
 
-  public static class StackLayoutExtensions {
+  public static partial class StackLayoutExtensions {
     public static Xamarin.Forms.StackLayout Orientation(this Xamarin.Forms.StackLayout obj, Xamarin.Forms.StackOrientation value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.StackLayout.OrientationProperty, value);
     public static Xamarin.Forms.StackLayout Orientation(this Xamarin.Forms.StackLayout obj, BindableValue<Xamarin.Forms.StackOrientation> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.StackLayout.OrientationProperty, value, mode);
     public static Xamarin.Forms.StackLayout Orientation<TFrom>(this Xamarin.Forms.StackLayout obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.StackOrientation> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.StackLayout.OrientationProperty, value, selector);
@@ -4417,7 +4417,7 @@ namespace Clarity {
     public static Xamarin.Forms.StackLayout BindingContext<TFrom>(this Xamarin.Forms.StackLayout obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.StackLayout.BindingContextProperty, value, selector);
   }
 
-  public static class GridExtensions {
+  public static partial class GridExtensions {
     public static Xamarin.Forms.Grid RowSpacing(this Xamarin.Forms.Grid obj, System.Double value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Grid.RowSpacingProperty, value);
     public static Xamarin.Forms.Grid RowSpacing(this Xamarin.Forms.Grid obj, BindableValue<System.Double> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Grid.RowSpacingProperty, value, mode);
     public static Xamarin.Forms.Grid RowSpacing<TFrom>(this Xamarin.Forms.Grid obj, BindableValue<TFrom> value, System.Func<TFrom, System.Double> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Grid.RowSpacingProperty, value, selector);
@@ -4531,7 +4531,7 @@ namespace Clarity {
     public static Xamarin.Forms.Grid BindingContext<TFrom>(this Xamarin.Forms.Grid obj, BindableValue<TFrom> value, System.Func<TFrom, System.Object> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Grid.BindingContextProperty, value, selector);
   }
 
-  public static class FrameExtensions {
+  public static partial class FrameExtensions {
     public static Xamarin.Forms.Frame OutlineColor(this Xamarin.Forms.Frame obj, Xamarin.Forms.Color value) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Frame.OutlineColorProperty, value);
     public static Xamarin.Forms.Frame OutlineColor(this Xamarin.Forms.Frame obj, BindableValue<Xamarin.Forms.Color> value, Xamarin.Forms.BindingMode mode = Xamarin.Forms.BindingMode.Default) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Frame.OutlineColorProperty, value, mode);
     public static Xamarin.Forms.Frame OutlineColor<TFrom>(this Xamarin.Forms.Frame obj, BindableValue<TFrom> value, System.Func<TFrom, Xamarin.Forms.Color> selector) => Helpers.SetPropertyValue(obj, Xamarin.Forms.Frame.OutlineColorProperty, value, selector);

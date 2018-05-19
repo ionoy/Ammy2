@@ -105,7 +105,7 @@ namespace Clarity.Generator
                                          //.Where(f => !IsGeneratedAlready(generatedProperties, f.Name, baseTypes))
                                          .ToList();
 
-            sb.AppendLine($"  public static class {type.Name}Extensions {{");
+            sb.AppendLine($"  public static partial class {type.Name}Extensions {{");
 
             foreach (var bindableProperty in bindableProperties) {
                 var clrPropertyName = bindableProperty.Name.Substring(0, bindableProperty.Name.Length - "Property".Length);

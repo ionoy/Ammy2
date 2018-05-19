@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Clarity
 {
-    public class MainScreen : ClarityBase
+    public class Calculator : ClarityBase
     {
         private List<MyTask> _tasks = new List<MyTask>();
 
@@ -32,6 +32,7 @@ namespace Clarity
 
             return Grid.Width(100)
                        .Height(200)
+                       .RowDefinitions()
                        .Children(
                            Entry.Text(""),
                            Label.Text(text),
