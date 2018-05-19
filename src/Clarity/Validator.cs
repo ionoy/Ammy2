@@ -35,9 +35,7 @@ namespace Clarity
             _validate(value, this);
 
             validationFailed.Value = !_isSuccess;
-
-            if (!_isSuccess)
-                validationMessage.Value = string.Join(Environment.NewLine, _errors);
+            validationMessage.Value = string.Join(Environment.NewLine, _errors);
         }
     }
 }

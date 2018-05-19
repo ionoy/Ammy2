@@ -26,6 +26,7 @@ namespace Clarity
 
             void taskValidator(MyTask task, Validator<MyTask> validator)
             {
+                "".Equals("", StringComparison.InvariantCultureIgnoreCase);
                 if (string.IsNullOrWhiteSpace(task.TaskName))
                     validator.AddError("Task name cannot be empty");
             }

@@ -7,7 +7,26 @@ using Xamarin.Forms;
 namespace Sample.Calculator
 {
     public class App : Application {
-        public App() => MainPage = new Calculator().MainPage();
+        public App() => MainPage = new Validation().MainPage();
+    }
+
+    public class Validation : ClarityBase
+    {
+        public ContentPage MainPage()
+        {
+            var counter = CreateBindableValue(0);
+
+            // define local function for Button's Command
+            void increment() => counter.Value++;
+
+            return ContentPage.Content(
+                        StackLayout.Children(
+                            Label.Text(counter, c => c.ToString()),
+                            Button.Text("Increment")
+                                  .Command(increment)
+                        )
+                    );
+        }
     }
 
     public class Calculator : ClarityBase
@@ -21,7 +40,7 @@ namespace Sample.Calculator
             var queuedValue = 0.0;
             var queuedOp = initOp;
             var isOperatorQueued = false;
-
+            
             void appendNumber(int number)
             {
                 if (isOperatorQueued) {

@@ -23,7 +23,7 @@ namespace Clarity
             }
         }
 
-        public BindableValue<string> GetValidationMessage => _validationMessage ?? new BindableValue<string>("");
+        public BindableValue<string> ValidationMessage => _validationMessage ?? new BindableValue<string>("");
         public BindableValue<bool> ValidationFailed => _validationFailed ?? new BindableValue<bool>(false);
         
         public BindableValue(TVal value, Action<TVal, Validator<TVal>> validate = null)
@@ -37,7 +37,11 @@ namespace Clarity
             }
         }
 
-        public void SetValueSilent(TVal value) => _value = value;
+        public void SetValueSilent(TVal value)
+        {
+            _value = value;
+            Validate(false);
+        }
 
         public IDisposable Subscribe(Action<TVal> newValue)
         {
@@ -48,12 +52,13 @@ namespace Clarity
 
         public void AddBinding(IDisposable binding) => _bindings[binding] = null;
 
-        public void Validate()
+        public void Validate(bool throwIfNoValidator = true)
         {
-            if (_validator == null)
+            if (_validator != null) {
+                _validator.Reset();
+                _validator.Validate(_value, _validationFailed, _validationMessage);
+            } else if (throwIfNoValidator)
                 throw new InvalidOperationException("You need to set `validate` parameter in order to call Validate method successfully");
-
-            _validator.Validate(_value, _validationFailed, _validationMessage);
         }
 
         public void Dispose()
