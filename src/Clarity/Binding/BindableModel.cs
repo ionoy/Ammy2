@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq.Expressions;
-using System.Reflection;
-using Xamarin.Forms;
 
 namespace Clarity
 {
-
     public class BindableModel<TModel> : IDisposable
     {
         private TModel _model;

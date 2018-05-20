@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq.Expressions;
-using System.Reflection;
 using Xamarin.Forms;
 
 namespace Clarity
 {
-    public class Calculator : ClarityBase
+    class Workbench : ClarityBase
     {
         private List<MyTask> _tasks = new List<MyTask>();
 
@@ -44,7 +40,6 @@ namespace Clarity
                        );
         }
     }
-
     
 
     public class MyTask
