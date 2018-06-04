@@ -1,4 +1,5 @@
 ﻿using Clarity;
+using Sample.Calculator.Clarity.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,26 @@ using Xamarin.Forms;
 namespace Sample.Calculator
 {
     public class App : Application {
-        public App() => MainPage = new Calculator().MainPage();
+        public App()
+        {
+            MainPage = new RuntimeTest().MainPage();
+
+            ClarityRuntime.Start();
+        }
     }
     
     public class Calculator : ClarityBase
     {
         delegate double CalcOp(double accu, double val);
         
+        public int ReturnInt()
+        {
+            //if (ClarityRuntime.HasUpdate(typeof(Calculator), nameof(ReturnInt)))
+            //    return (int)ClarityRuntime.UpdateReturn(typeof(Calculator), nameof(ReturnInt), this);
+
+            return 10; 
+        }
+
         public ContentPage MainPage()
         {
             var initOp = new CalcOp((_, val) => val);

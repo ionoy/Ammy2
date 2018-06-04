@@ -1,0 +1,3 @@
+[submodule "LiveProjectCommon"]
+	path = LiveProjectCommon
+	url = https://github.com/ionoy/LiveProjectCommon.git
