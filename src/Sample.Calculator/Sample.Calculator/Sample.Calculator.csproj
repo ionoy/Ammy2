@@ -5,24 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\Checksum.cs" Link="Clarity.Runtime\Checksum.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\ClarityRuntime.cs" Link="Clarity.Runtime\ClarityRuntime.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\DebugLogger.cs" Link="Clarity.Runtime\DebugLogger.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\ETDeserializer.cs" Link="Clarity.Runtime\ETDeserializer.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\KnownTypes.cs" Link="Clarity.Runtime\KnownTypes.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\Message.cs" Link="Clarity.Runtime\Message.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\MessageParser.cs" Link="Clarity.Runtime\MessageParser.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\NumericTypes.cs" Link="Clarity.Runtime\NumericTypes.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\ParserBase.cs" Link="Clarity.Runtime\ParserBase.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\ReflectionExtensions.cs" Link="Clarity.Runtime\ReflectionExtensions.cs" />
-    <Compile Include="..\..\..\..\Clarity.VisualStudio\deps\LiveProjectCommon\Sources\ServerClient.cs" Link="Clarity.Runtime\ServerClient.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Clarity\Clarity.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="LiveSharp">
+      <HintPath>..\..\..\..\LiveSharp\build\LiveSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <Import Project="..\..\..\..\LiveSharp\build\LiveSharp.targets" />
 </Project>

@@ -1,5 +1,5 @@
 ﻿using Clarity;
-using Sample.Calculator.Clarity.Runtime;
+using LiveSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,21 +10,13 @@ namespace Sample.Calculator
     class RuntimeTest : ClarityBase
     {
         delegate double CalcOp(double accu, double val);
-
+        
         public int ReturnInt()
         {
-            var res = ClarityRuntime.GetUpdate(typeof(RuntimeTest), nameof(ReturnInt));
-            if (res != null) return (int)ClarityRuntime.Execute(res, this);
-
-            return 15;
+            return 10;
         }
 
-        public void VoidMethod()
-        {
-            var res = ClarityRuntime.GetUpdate(typeof(RuntimeTest), nameof(ReturnInt));
-            if (res != null) ClarityRuntime.ExecuteVoid(res, this);
-        }
-
+        [LiveSharp]
         public ContentPage MainPage()
         {
             var initOp = new CalcOp((_, val) => val);
