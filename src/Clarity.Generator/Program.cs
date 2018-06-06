@@ -59,7 +59,7 @@ namespace Clarity.Generator
             foreach (var generatedExtension in generatedExtensions)
                 sb.AppendLine(generatedExtension);
 
-            sb.AppendLine("  public partial class ClarityBase {");
+            sb.AppendLine("  public partial class ClarityPage {");
 
             foreach (var bindableObject in bindableObjects) {
                 AppendTypeConstructors(sb, bindableObject);

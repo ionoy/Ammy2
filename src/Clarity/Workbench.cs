@@ -4,11 +4,11 @@ using Xamarin.Forms;
 
 namespace Clarity
 {
-    class Workbench : ClarityBase
+    class Workbench : ClarityPage
     {
         private List<MyTask> _tasks = new List<MyTask>();
 
-        public BindableObject Main()
+        public override View BuildContent()
         {
             var maxTaskLength = 200;
             var taskModel = CreateBindableModel(new MyTask(), taskValidator);

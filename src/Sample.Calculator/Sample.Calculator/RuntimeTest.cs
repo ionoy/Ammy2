@@ -7,30 +7,20 @@ using Xamarin.Forms;
 
 namespace Sample.Calculator
 {
-    class RuntimeTest : ClarityBase
+    class RuntimeTest : ClarityPage
     {
-        delegate double CalcOp(double accu, double val);
-        
         public int ReturnInt()
         {
-            return 10;
+            return 20;
         }
 
-        [LiveSharp]
-        public ContentPage MainPage()
+        public override View BuildContent()
         {
-            var initOp = new CalcOp((_, val) => val);
-            var labelText = CreateBindableValue(0);
+            var labelText = CreateBindableValue(ReturnInt());
 
-            Device.StartTimer(TimeSpan.FromSeconds(5), () =>
-            {
-                labelText.Value = ReturnInt();
-                return true;
-            });
-
-            return ContentPage.Content(
-                       Label.Text(labelText, t => t.ToString())
-                   );
+            return StackLayout.Children(
+                Label.Text(labelText, t => t.ToString()),
+                Label.Text("Hello"));
         }
     }
 }

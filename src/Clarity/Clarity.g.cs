@@ -4673,7 +4673,7 @@ public static TElement Grid_Column<TElement>(this TElement instance, System.Int3
 public static TElement Grid_ColumnSpan<TElement>(this TElement instance, System.Int32 val) where TElement : Xamarin.Forms.BindableObject => Helpers.SetAttachedValue(instance, Xamarin.Forms.Grid.ColumnSpanProperty, val);
 
 }
-  public partial class ClarityBase {
+  public partial class ClarityPage {
     public Xamarin.Forms.ColumnDefinition ColumnDefinition => new Xamarin.Forms.ColumnDefinition();
     public Xamarin.Forms.RowDefinition RowDefinition => new Xamarin.Forms.RowDefinition();
     public Xamarin.Forms.HtmlWebViewSource HtmlWebViewSource => new Xamarin.Forms.HtmlWebViewSource();

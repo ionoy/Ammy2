@@ -11,9 +11,16 @@ using Xamarin.Forms;
 
 namespace Clarity
 {
-    public partial class ClarityBase : IDisposable
+    public abstract partial class ClarityPage : ContentPage, IDisposable
     {
+        public ClarityPage()
+        {
+            Content = BuildContent();
+        }
+
         public ConcurrentBag<IDisposable> Disposables = new ConcurrentBag<IDisposable>();
+        
+        public abstract View BuildContent();
 
         public void Dispose()
         {
