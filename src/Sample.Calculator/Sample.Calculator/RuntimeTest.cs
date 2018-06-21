@@ -11,14 +11,14 @@ namespace Sample.Calculator
     {
         public int ReturnInt()
         {
-            return 20;
+            return 1;
         }
 
         public override View BuildContent()
         {
             var labelText = CreateBindableValue(ReturnInt());
-
-            return StackLayout.Children(
+             
+            return StackLayout.Children( 
                 Label.Text(labelText, t => t.ToString()),
                 Label.Text("Hello"));
         }
