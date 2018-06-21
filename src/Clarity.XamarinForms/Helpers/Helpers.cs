@@ -14,13 +14,13 @@ namespace Clarity
 
         public static TElement SetPropertyValue<TElement, TProperty>(TElement instance, BindableProperty property, BindableValue<TProperty> value, BindingMode mode = BindingMode.Default) where TElement : BindableObject
         {
-            new ClarityBinding<TProperty>(new BindableValueBindingSource<TProperty>(value), new BindableObjectBindingSource<TProperty>(instance, property), mode);
+            new ClarityBinding<TProperty>(new BindableValueBindingSource<TProperty>(value), new BindableObjectBindingSource<TProperty>(instance, property), (ClarityBindingMode)mode);
             return instance;
         }
 
         public static TElement SetPropertyValue<TElement, TProperty, TFrom>(TElement instance, BindableProperty property, BindableValue<TFrom> value, Func<TFrom, TProperty> selector) where TElement : BindableObject
         {
-            new ClarityBinding<TProperty>(new BindableValueWithSelectorBindingSource<TFrom, TProperty>(value, selector), new BindableObjectBindingSource<TProperty>(instance, property), BindingMode.OneWay);
+            new ClarityBinding<TProperty>(new BindableValueWithSelectorBindingSource<TFrom, TProperty>(value, selector), new BindableObjectBindingSource<TProperty>(instance, property), ClarityBindingMode.OneWay);
             return instance;
         }
 

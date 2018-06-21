@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Clarity.XamarinForms</id>
+    <version>1.0.0</version>
+    <title>Clarity for Xamarin.Forms</title>
+    <authors>Mihhail Maslakov</authors>
+    <owners>Ion OÜ</owners>
+    <licenseUrl>https://choosealicense.com/licenses/mit/</licenseUrl>
+    <projectUrl>https://github.com/ionoy/Clarity</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Clarity is an application framework based on Xamarin Forms</description>
+    <copyright>Copyright 2018</copyright>
+    <tags>Xamarin Forms XAML</tags>
+  </metadata>
+  <files>
+    <file src="..\src\Clarity.XamarinForms\bin\Debug\netstandard2.0\Clarity.XamarinForms.dll" target="lib\netstandard2.0" />
+    <file src="..\src\Clarity.XamarinForms\bin\Debug\netstandard2.0\Clarity.dll" target="lib\netstandard2.0" />
+  </files>
+</package>

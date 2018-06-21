@@ -1,5 +1,4 @@
 ﻿using System;
-using Xamarin.Forms;
 
 namespace Clarity
 {
@@ -12,7 +11,7 @@ namespace Clarity
             _bindableValue = bv;
         }
         
-        public BindingMode DefaultBindingMode => BindingMode.Default;
+        public ClarityBindingMode DefaultBindingMode => ClarityBindingMode.Default;
         public IDisposable Subscribe(Action<T> onUpdate) => _bindableValue.Subscribe(onUpdate);
         public void SetValue(T val) => _bindableValue.Value = val;
         public T GetValue() => _bindableValue.Value;

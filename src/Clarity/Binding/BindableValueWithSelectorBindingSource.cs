@@ -1,5 +1,4 @@
 ﻿using System;
-using Xamarin.Forms;
 
 namespace Clarity
 {
@@ -14,7 +13,7 @@ namespace Clarity
             _selector = selector;
         }
 
-        public BindingMode DefaultBindingMode => BindingMode.Default;
+        public ClarityBindingMode DefaultBindingMode => ClarityBindingMode.Default;
         public IDisposable Subscribe(Action<T> onUpdate) => _bindableValue.Subscribe(val => onUpdate(_selector(val)));
         public void SetValue(T val) => throw new InvalidOperationException("Can't update bindable value with expression");
         public T GetValue() => _selector(_bindableValue.Value);

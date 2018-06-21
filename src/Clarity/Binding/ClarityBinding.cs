@@ -1,30 +1,28 @@
 ﻿using System;
-using System.ComponentModel;
-using Xamarin.Forms;
 
 namespace Clarity
 {
     public class ClarityBinding<TTo> : IDisposable
     {
-        protected BindingMode _mode;
+        protected ClarityBindingMode _mode;
         protected IBindingSource<TTo> _from;
         protected IBindingSource<TTo> _to;
         
         private IDisposable _firstDisposable;
         private IDisposable _secondDisposable;
 
-        public ClarityBinding(IBindingSource<TTo> from, IBindingSource<TTo> to, BindingMode mode, bool initialSet = true)
+        public ClarityBinding(IBindingSource<TTo> from, IBindingSource<TTo> to, ClarityBindingMode mode, bool initialSet = true)
         {
             _from = from;
             _to = to;
             _mode = mode;
 
-            if (_mode == BindingMode.Default)
+            if (_mode == ClarityBindingMode.Default)
                 _mode = _to.DefaultBindingMode;
 
             _firstDisposable = from.Subscribe(val => to.SetValue(val));
 
-            if (_mode != BindingMode.OneWay)
+            if (_mode != ClarityBindingMode.OneWay)
                 _secondDisposable = to.Subscribe(val => from.SetValue(val));
 
             if (initialSet)

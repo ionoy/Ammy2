@@ -16,7 +16,7 @@ namespace Clarity
             _property = bp;
         }
 
-        public BindingMode DefaultBindingMode => _property.DefaultBindingMode;
+        public ClarityBindingMode DefaultBindingMode => (ClarityBindingMode)_property.DefaultBindingMode;
         public IDisposable Subscribe(Action<T> onUpdate)
         {
             _object.PropertyChanged += propertyChanged;

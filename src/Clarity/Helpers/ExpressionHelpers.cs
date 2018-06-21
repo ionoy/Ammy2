@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Reflection;
-using Xamarin.Forms;
 
 namespace Clarity
 {
-
     public static class ExpressionHelpers
     {
         public static Func<TModel, TVal> GetGetter<TModel, TVal>(this Expression<Func<TModel, TVal>> getter, out string memberName)

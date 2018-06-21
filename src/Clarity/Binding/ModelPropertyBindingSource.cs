@@ -2,7 +2,6 @@
 using System.Collections.Concurrent;
 using System.ComponentModel;
 using System.Linq.Expressions;
-using Xamarin.Forms;
 
 namespace Clarity
 {
@@ -24,7 +23,7 @@ namespace Clarity
             }
         }
 
-        public BindingMode DefaultBindingMode => BindingMode.Default;
+        public ClarityBindingMode DefaultBindingMode => ClarityBindingMode.Default;
 
         public ModelPropertyBindingSource(TModel currentModel, Expression<Func<TModel, TMember>> memberExpression)
         {
