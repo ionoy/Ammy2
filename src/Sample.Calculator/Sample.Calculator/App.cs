@@ -6,7 +6,7 @@ namespace Sample.Calculator
     public class App : Application {
         public App()
         {
-            MainPage = new RuntimeTest();
+            MainPage = new Calculator();
         }
     } 
 }
