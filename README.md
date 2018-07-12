@@ -35,7 +35,7 @@ public class HelloWorld : ClarityPage
 ```
 ![preview](./content/helloworld.gif)
 
-As you can see, both **data** and **presentation** in the same method. But don't get your pitchforks up - **IT'S OKAY**. Your **data** still doesn't know anything about the **view** and most of the communication is still done with binding. Although now it's easier to navigate between the view and the code. 
+As you can see, both **data** and **presentation** are in the same method. But don't get your pitchforks up - **IT'S OKAY**. Your **data** still doesn't know anything about the **view** and most of the communication is still done with binding. Although now it's easier to navigate between the view and the code. 
 
 ## **Won't it become unreadable when I add more UI?**
 
