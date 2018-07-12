@@ -17,7 +17,7 @@
 
 ```cs
 public class App : Application {
-    public App() => MainPage = new HelloWorld().MainPage();
+    public App() => MainPage = new HelloWorld();
 }
 
 public class HelloWorld : ClarityPage
