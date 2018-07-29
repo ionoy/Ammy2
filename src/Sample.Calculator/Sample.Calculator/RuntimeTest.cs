@@ -20,7 +20,7 @@ namespace Sample.Calculator
              
             return StackLayout.Children( 
                 Label.Text(labelText, t => t.ToString()),
-                Label.Text("Hello 123"));
+                Label.Text("Hello"));
         }
     }
 }

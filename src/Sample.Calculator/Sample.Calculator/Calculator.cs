@@ -49,7 +49,7 @@ namespace Sample.Calculator
                                .VerticalTextAlignment(TextAlignment.Center)
                                .Text(currentValue, v => v.ToString()),
                            BuildNumberPad(appendNumber),
-                           Button.Text("/").Grid_RowCol(1, 3).Command(() => applyOperator((accu, val) => accu / val)),
+                           Button.Text("div/").Grid_RowCol(1, 3).Command(() => applyOperator((accu, val) => accu / val)),
                            Button.Text("*").Grid_RowCol(2, 3).Command(() => applyOperator((accu, val) => accu * val)),
                            Button.Text("-").Grid_RowCol(3, 3).Command(() => applyOperator((accu, val) => accu - val)),
                            Button.Text("+").Grid_RowCol(4, 3).Command(() => applyOperator((accu, val) => accu + val)),
