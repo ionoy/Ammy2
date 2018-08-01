@@ -13,5 +13,17 @@ namespace Clarity
             instance.SetValue(Grid.ColumnProperty, col);
             return instance;
         }
+
+        public static TElement Init<TElement>(this TElement instance, Action<TElement> initializer) where TElement : BindableObject
+        {
+            initializer(instance);
+            return instance;
+        }
+
+        public static TElement As<TElement>(this TElement instance, out TElement reference) where TElement : BindableObject
+        {
+            reference = instance;
+            return reference;
+        }
     }
 }
