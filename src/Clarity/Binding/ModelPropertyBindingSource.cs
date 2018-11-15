@@ -50,14 +50,14 @@ namespace Clarity
                         onUpdate(_getter(CurrentModel));
                 }
 
-                var dispose = DisposableHelpers.Create(() => inpc.PropertyChanged -= propertyChanged);
+                var dispose = DisposableDummy.Create(() => inpc.PropertyChanged -= propertyChanged);
 
                 _subscriptions.Add((onUpdate, dispose));
 
                 return dispose;
             }
 
-            return DisposableHelpers.Create(() => { });
+            return DisposableDummy.Create(() => { });
         }
 
         private void Resubscribe(TModel value, Action<TMember> handler, IDisposable disposable)

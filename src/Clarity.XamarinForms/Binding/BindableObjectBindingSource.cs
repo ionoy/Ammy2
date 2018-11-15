@@ -27,7 +27,7 @@ namespace Clarity
                     onUpdate((T)_object.GetValue(_property));
             }
 
-            return DisposableHelpers.Create(() => _object.PropertyChanged -= propertyChanged);
+            return DisposableDummy.Create(() => _object.PropertyChanged -= propertyChanged);
         }
 
         public void SetValue(T val) => _object.SetValue(_property, val);

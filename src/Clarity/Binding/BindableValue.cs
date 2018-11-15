@@ -45,7 +45,7 @@ namespace Clarity
         {
             _changeHandlers[newValue] = null;
 
-            return DisposableHelpers.Create(() => _changeHandlers.TryRemove(newValue, out var _));
+            return DisposableDummy.Create(() => _changeHandlers.TryRemove(newValue, out var _));
         }
 
         public void AddBinding(IDisposable binding) => _bindings[binding] = null;
