@@ -4,9 +4,10 @@ namespace Clarity
 {
     public static class Extensions
     {
-        public static void AddTo(this IDisposable disposable, Disposables disposables)
+        public static T AddTo<T>(this T disposable, Disposables disposables) where T : IDisposable
         {
             disposables.Add(disposable);
+            return disposable;
         }
     }
 }

@@ -14,7 +14,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Calculator.Android",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Calculator", "Sample.Calculator\Sample.Calculator\Sample.Calculator.csproj", "{B54C59DA-9D2C-4997-98B2-8EF80720C492}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity", "Clarity\Clarity.csproj", "{5CB8A237-CFB0-48F2-8CA5-0D010B031CD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clarity", "Clarity\Clarity.csproj", "{5CB8A237-CFB0-48F2-8CA5-0D010B031CD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clarity.VisualStudio", "Clarity.VisualStudio\Clarity.VisualStudio.csproj", "{B1C6608E-8AF8-4622-91BA-C3FFFA5A0A29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{5CB8A237-CFB0-48F2-8CA5-0D010B031CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CB8A237-CFB0-48F2-8CA5-0D010B031CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CB8A237-CFB0-48F2-8CA5-0D010B031CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1C6608E-8AF8-4622-91BA-C3FFFA5A0A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C6608E-8AF8-4622-91BA-C3FFFA5A0A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C6608E-8AF8-4622-91BA-C3FFFA5A0A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C6608E-8AF8-4622-91BA-C3FFFA5A0A29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
