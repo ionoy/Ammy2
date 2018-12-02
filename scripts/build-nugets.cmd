@@ -1,1 +1,1 @@
-..\.nuget\nuget pack Clarity.XamarinForms.nuspec
+..\.nuget\nuget pack Ammy.XamarinForms.nuspec

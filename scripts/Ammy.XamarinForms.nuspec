@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Ammy.XamarinForms</id>
+    <version>1.0.9</version>
+    <title>Ammy for Xamarin.Forms</title>
+    <authors>Mihhail Maslakov</authors>
+    <owners>Ion OÜ</owners>
+    <licenseUrl>https://choosealicense.com/licenses/mit/</licenseUrl>
+    <projectUrl>https://github.com/ionoy/Ammy</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Ammy is an application framework based on Xamarin Forms</description>
+    <copyright>Copyright 2018</copyright>
+    <tags>Xamarin Forms XAML</tags>
+  </metadata>
+  <files>
+    <file src="..\src\Ammy.XamarinForms\bin\Debug\netstandard2.0\Ammy.XamarinForms.dll" target="lib\netstandard2.0" />
+    <file src="..\src\Ammy.XamarinForms\bin\Debug\netstandard2.0\Ammy.dll" target="lib\netstandard2.0" />
+  </files>
+</package>

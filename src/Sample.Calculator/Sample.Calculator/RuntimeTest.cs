@@ -1,4 +1,4 @@
-﻿using Clarity;
+﻿using Ammy;
 using LiveSharp;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace Sample.Calculator
 {
-    class RuntimeTest : ClarityPage
+    class RuntimeTest : AmmyPage
     {
         public int ReturnInt()
         {

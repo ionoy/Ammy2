@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="livesharp" Version="1.0.45" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Ammy.XamarinForms\Ammy.XamarinForms.csproj" />
+    <ProjectReference Include="..\Ammy\Ammy.csproj" />
   </ItemGroup>
+
 </Project>

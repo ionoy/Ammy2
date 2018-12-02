@@ -1,4 +1,4 @@
-﻿using Clarity;
+﻿using Ammy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace Sample.Calculator
 {
     using CalcOp = Func<double, double, double>;
 
-    public class Calculator : ClarityPage
+    public class Calculator : AmmyPage
     {
         public override View BuildContent()
         {

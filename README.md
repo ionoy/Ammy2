@@ -1,8 +1,8 @@
-# **Clarity** is an application framework for XAML based platforms
+# **Ammy** is an application framework for XAML based platforms
 
 ## **How to install**
 
-`install-package Clarity.XamarinForms`
+`install-package Ammy.XamarinForms`
 
 (other platforms coming soon)
 
@@ -20,7 +20,7 @@ public class App : Application {
     public App() => MainPage = new HelloWorld();
 }
 
-public class HelloWorld : ClarityPage
+public class HelloWorld : AmmyPage
 {
     public override View BuildContent()
     {
